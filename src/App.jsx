@@ -77,7 +77,7 @@ function App() {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    fetch("/public/review.csv")
+    fetch("/review.csv")
       .then((res) => res.text())
       .then((text) => {
         Papa.parse(text, {
