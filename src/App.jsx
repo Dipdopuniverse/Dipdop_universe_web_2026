@@ -1,8 +1,9 @@
 import "./App.css";
 import { Header } from "./component/Header";
 import { Footer } from "./component/Footer";
-import { useState } from "react";
 import { FaRegMessage } from "react-icons/fa6";
+import { useEffect, useState } from "react";
+import Papa from "papaparse";
 //img
 import Team from "/grub.jpg";
 import Kemenin from "/kemenin.jpg";
@@ -65,12 +66,26 @@ import LogoLoop from "./components/LogoLoop";
 import ShinyText from "./components/ShinyText";
 import AnimatedContent from "./components/AnimatedContent";
 import SpotlightCard from "./components/SpotlightCard";
+import FlowingMenu from "./components/FlowingMenu";
+import ReviewCard from "./components/ReviewCard";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState("All");
   //json dari page
 
+  const [reviews, setReviews] = useState([]);
+
+  useEffect(() => {
+    fetch("/public/review.csv")
+      .then((res) => res.text())
+      .then((text) => {
+        Papa.parse(text, {
+          header: true,
+          complete: (res) => setReviews(res.data),
+        });
+      });
+  }, []);
   const testimoni = [
     {
       id: 1,
@@ -369,9 +384,21 @@ autentik dan produk interior yang berkualitas.`,
       description:
         "DIPDOP Agency menyediakan solusi kreatif dan pemasaran digital untuk brand, UMKM, dan institusi. Kami membantu perencanaan strategi komunikasi, kampanye digital, serta aktivasi berbasis komunitas yang relevan dan berdampak.",
       scopes: [
-        "Digital marketing & campaign",
-        "Branding & content strategy",
-        "Event & community activation",
+        {
+          link: "https://dipdop.net",
+          text: "Digital marketing & campaign",
+          image: "https://picsum.photos/600/400?random=1",
+        },
+        {
+          link: "https://dipdop.net",
+          text: "Branding & content strategy",
+          image: "https://picsum.photos/600/400?random=2",
+        },
+        {
+          link: "https://dipdop.net",
+          text: "Event & community activation",
+          image: "https://picsum.photos/600/400?random=3",
+        },
       ],
       link: "https://dipdop.net",
     },
@@ -382,9 +409,21 @@ autentik dan produk interior yang berkualitas.`,
       description:
         "DIPDOP Merch menghadirkan produk merchandise sebagai media komunikasi brand, identitas komunitas, serta sarana kolaborasi kreatif dalam berbagai kampanye dan kegiatan.",
       scopes: [
-        "Merchandise komunitas & event",
-        "Custom product untuk brand & CSR",
-        "Limited collaboration items",
+        {
+          link: "https://www.ciptaloka.com/+dipdop/",
+          text: "Limited collaboration items",
+          image: "https://picsum.photos/600/400?random=1",
+        },
+        {
+          link: "https://www.ciptaloka.com/+dipdop/",
+          text: "Custom product untuk brand & CSR",
+          image: "https://picsum.photos/600/400?random=2",
+        },
+        {
+          link: "https://www.ciptaloka.com/+dipdop/",
+          text: "Merchandise komunitas & event",
+          image: "https://picsum.photos/600/400?random=3",
+        },
       ],
       link: "https://www.ciptaloka.com/+dipdop/",
     },
@@ -395,9 +434,21 @@ autentik dan produk interior yang berkualitas.`,
       description:
         "DIPDOP Community merupakan ruang kolaboratif bagi pelaku UMKM, anak muda, kreator, dan komunitas untuk bertumbuh melalui program edukasi, diskusi, dan kolaborasi lintas sektor.",
       scopes: [
-        "Webinar & kelas edukasi",
-        "Program komunitas & mentoring",
-        "Kolaborasi brand & CSR",
+        {
+          link: "https://www.instagram.com/dipdop.community",
+          text: "Webinar & kelas edukasi",
+          image: "https://picsum.photos/600/400?random=1",
+        },
+        {
+          link: "https://www.instagram.com/dipdop.community",
+          text: "Program komunitas & mentoring",
+          image: "https://picsum.photos/600/400?random=2",
+        },
+        {
+          link: "https://www.instagram.com/dipdop.community",
+          text: "Kolaborasi brand & CSR",
+          image: "https://picsum.photos/600/400?random=3",
+        },
       ],
       link: "https://www.instagram.com/dipdop.community",
     },
@@ -408,9 +459,21 @@ autentik dan produk interior yang berkualitas.`,
       description:
         "UMKM Update adalah media digital yang berfokus pada edukasi, informasi, dan eksposur UMKM. Media ini menjadi kanal distribusi konten, kampanye, dan pesan brand yang ingin menjangkau pelaku usaha secara langsung.",
       scopes: [
-        "Edukasi & insight UMKM",
-        "Promosi & storytelling",
-        "Kampanye kolaboratif",
+        {
+          link: "https://www.instagram.com/umkmupdate.id",
+          text: "Edukasi & insight UMKM",
+          image: "https://picsum.photos/600/400?random=1",
+        },
+        {
+          link: "https://www.instagram.com/umkmupdate.id",
+          text: "Promosi & storytelling",
+          image: "https://picsum.photos/600/400?random=2",
+        },
+        {
+          link: "https://www.instagram.com/umkmupdate.id",
+          text: "Kampanye kolaboratif",
+          image: "https://picsum.photos/600/400?random=3",
+        },
       ],
       link: "https://www.instagram.com/umkmupdate.id",
     },
@@ -462,7 +525,7 @@ autentik dan produk interior yang berkualitas.`,
     <>
       <Header />
       {/** kalo mau di revisi silakan asal rapi boleh pakai AI tapi jangan 100% & didokumentasi rapi */}
-      <div className="w-full relative flex flex-col pt-20 bg-[#EDEDCE]">
+      <div className="w-full relative flex flex-col pt-20 bg-white">
         <div className="fixed bottom-15 right-6 flex flex-col items-end gap-3 z-50">
           <div
             className={`flex flex-col gap-3 transition-all duration-300 origin-bottom ${
@@ -536,13 +599,13 @@ autentik dan produk interior yang berkualitas.`,
           </div>
 
           <div className="hidden md:block"></div>
-          <div className="relative group self-end w-full h-auto md:h-fit flex flex-col bg-[#EDEDCE] p-7 md:p-10 lg:p-14 gap-6 rounded-tl-[50px]">
+          <div className="relative group self-end w-full h-auto md:h-fit flex flex-col bg-white p-7 md:p-10 lg:p-14 gap-6 rounded-tl-[50px]">
             <div className="absolute -top-[50px] right-0 w-[50px] h-[50px] hidden md:block">
-              <div className="w-full h-full rounded-br-[50px] shadow-[20px_20px_0_20px_#EDEDCE]"></div>
+              <div className="w-full h-full rounded-br-[50px] shadow-[20px_20px_0_20px_white]"></div>
             </div>
 
             <div className="absolute bottom-0 -left-[50px] w-[50px] h-[50px] hidden md:block">
-              <div className="w-full h-full rounded-br-[50px] shadow-[20px_20px_0_20px_#EDEDCE]"></div>
+              <div className="w-full h-full rounded-br-[50px] shadow-[20px_20px_0_20px_white]"></div>
             </div>
             <h1 className="roboto-a text-2xl lg:text-5xl text-[#0C2C55] font-bold leading-tight">
               Membangun Brand, Menggerakkan UMKM, Menciptakan Dampak Nyata
@@ -575,13 +638,13 @@ autentik dan produk interior yang berkualitas.`,
         {/** Overview */}
         <section
           id="overview"
-          className="w-full h-auto md:h-lvh flex flex-col md:flex-row gap-7 md:gap-20 justify-center items-center px-1 py-2 md:px-5 md:py-10 bg-[#EDEDCE] text-[#0C2C55] "
+          className="w-full h-auto md:h-lvh flex flex-col md:flex-row gap-7 md:gap-20 justify-center items-center px-1 py-2 md:px-5 md:py-10 bg-white text-[#0C2C55] "
         >
-          <div className="w-auto md:w-[50%] h-auto p-3 md:p-10 flex flex-col items-start gap-5">
+          <div className="w-auto md:w-[50%] h-auto md:h-lvh p-3 md:p-10 flex flex-col items-start gap-5">
             <h1 className="w-auto font-bold text-[#0C2C55] poppins-bold text-2xl md:text-6xl lg:text-8xl">
               TENTANG DIPDOP UNIVERSE CORP
             </h1>
-            <article className="text-sm font-sans text-[#6BA2B0] lg:text-lg font-bold md:text-lg ">
+            <article className="text-sm font-sans text-gray-900 lg:text-lg font-bold md:text-lg ">
               PT DIPDOP UNIVERSE CORP merupakan holding company yang menaungi
               berbagai unit usaha di bidang kreatif, media, dan pemberdayaan
               UMKM. Kami berfokus pada pengembangan ekosistem kolaboratif yang
@@ -603,7 +666,7 @@ autentik dan produk interior yang berkualitas.`,
           </div>
         </section>
         {/** Achievements */}
-        <section id="achievements" className="py-24 bg-[#EDEDCE]">
+        <section id="achievements" className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-6">
             <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
               <div className="max-w-2xl">
@@ -621,7 +684,7 @@ autentik dan produk interior yang berkualitas.`,
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
               <div className="group relative bg-[#6BA2B0] p-1 rounded-[40px] shadow-lg hover:shadow-2xl transition-all duration-500">
-                <div className="bg-[#EDEDCE] rounded-[36px] p-8 flex flex-col items-center text-center h-full">
+                <div className="bg-white rounded-[36px] p-8 flex flex-col items-center text-center h-full">
                   <div className="h-24 flex items-center justify-center mb-6">
                     <img
                       src={start4}
@@ -638,7 +701,7 @@ autentik dan produk interior yang berkualitas.`,
               </div>
 
               <div className="group relative bg-[#6BA2B0] p-1 rounded-[40px] shadow-lg hover:shadow-2xl transition-all duration-500">
-                <div className="bg-[#EDEDCE] rounded-[36px] p-8 flex flex-col items-center text-center h-full">
+                <div className="bg-white rounded-[36px] p-8 flex flex-col items-center text-center h-full">
                   <div className="h-24 flex items-center justify-center mb-6">
                     <img
                       src={Kemenin}
@@ -654,8 +717,8 @@ autentik dan produk interior yang berkualitas.`,
                 </div>
               </div>
             </div>
-            <div className="relative bg-[#EDEDCE] border-2 border-[#6BA2B0] rounded-[40px] p-10 flex flex-col md:flex-row items-center justify-center gap-8 overflow-hidden group">
-              <div className="absolute -right-10 -bottom-10 text-[12rem] font-black text-slate-100 italic select-none group-hover:text-[#0C2C55] transition-colors">
+            <div className="relative bg-white border-2 border-[#6BA2B0] rounded-[40px] p-10 flex flex-col md:flex-row items-center justify-center gap-8 overflow-hidden group">
+              <div className="absolute -top-10 -right-5 md:-right-10 md:-bottom-10 text-[10rem] md:text-[12rem] font-black text-slate-100 italic select-none group-hover:text-[#0C2C55] transition-colors">
                 200+
               </div>
 
@@ -671,7 +734,7 @@ autentik dan produk interior yang berkualitas.`,
                   ].map((i) => (
                     <div
                       key={i}
-                      className="w-15 h-15 rounded-full border-4 flex items-center justify-center border-white shadow bg-white shadow-[#6BA2B0]"
+                      className="md:w-15 md:h-15 w-10 h-10 rounded-full border-4 flex items-center justify-center border-white shadow bg-white shadow-[#6BA2B0]"
                     >
                       <img
                         src={i}
@@ -699,12 +762,12 @@ autentik dan produk interior yang berkualitas.`,
           id="ecosystem"
           className="w-full h-auto pb-8 pt-8 flex justify-center flex-col  "
         >
-          <div className="flex text-[#EDEDCE] poppins-bold justify-start items-start bg-[#EDEDCE]">
+          <div className="flex text-white poppins-bold justify-start items-start bg-white">
             <div className="bg-[#2D6A76] p-10 rounded-tr-[40px] relative">
-              <p className="text-4xl md:text-8xl uppercase text-[#EDEDCE] font-extrabold leading-none">
+              <p className="text-4xl md:text-8xl uppercase text-white font-extrabold leading-none">
                 Our Ecosystem
               </p>
-              <h1 className="text-lg text-[#EDEDCE] font-bold mt-4 max-w-2xl">
+              <h1 className="text-lg text-white font-bold mt-4 max-w-2xl">
                 Empat unit usaha yang saling terintegrasi untuk menjawab
                 kebutuhan bisnis, komunitas, dan pemberdayaan UMKM.
               </h1>
@@ -722,7 +785,7 @@ autentik dan produk interior yang berkualitas.`,
             {dipData.map((d) => (
               <div
                 key={d.id}
-                className="bg-white group p-8 w-full font-sans rounded-3xl shadow-2xl"
+                className="bg-[#EDEDCE] group p-8 w-full font-sans rounded-3xl shadow-2xl"
               >
                 <div className="flex relative flex-col gap-1  w-full">
                   <h1 className="text-4xl poppins-bol text-[#0C2C55] md:text-6xl font-black tracking-tighter  uppercase">
@@ -742,7 +805,7 @@ autentik dan produk interior yang berkualitas.`,
                       speed={4}
                       className="font-bold roboto-a "
                       delay={0}
-                      color="#EDEDCE"
+                      color="white"
                       shineColor="#ffffff"
                       spread={120}
                       direction="left"
@@ -758,19 +821,25 @@ autentik dan produk interior yang berkualitas.`,
                   {d.description}
                 </p>
 
-                <ul className="mt-6 space-y-1 font-sans text-[#358dad] font-bold text-2xl ">
-                  {d.scopes.map((scope, index) => (
-                    <li key={index} className="flex items-center">
-                      <span className="mr-2 text-lg ">#</span> {scope}
-                    </li>
-                  ))}
-                </ul>
+                <div className="w-full md:w-1/2 p-2 space-y-1 font-sans text-[#358dad] font-bold text-2xl ">
+                  <div style={{ height: "200px", position: "relative" }}>
+                    <FlowingMenu
+                      items={d.scopes}
+                      speed={8}
+                      textColor="#358dad"
+                      bgColor="#EDEDCE"
+                      marqueeBgColor="#0C2C55"
+                      marqueeTextColor="#ffffff"
+                      borderColor="#2D6A76"
+                    />
+                  </div>
+                </div>
 
                 <a
                   href={d.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-8 inline-flex bg-[#EDEDCE] text-[#358dad] px-6 py-3 rounded-4xl items-center gap-2 font-bold text-sm hover:bg-[#358dad] hover:text-white text-center transition-colors"
+                  className="mt-8 inline-flex bg-white text-[#358dad] px-6 py-3 rounded-4xl items-center gap-2 font-bold text-sm hover:bg-[#358dad] hover:text-white text-center transition-colors"
                 >
                   VISIT WEBSITE <span className=" text-lg">→</span>
                 </a>
@@ -778,7 +847,7 @@ autentik dan produk interior yang berkualitas.`,
             ))}
           </div>
         </section>
-        <section className="bg-[#EDEDCE] py-20 px-4 md:px-10">
+        <section className="bg-white py-20 px-4 md:px-10">
           <h2 className="text-4xl md:text-7xl poppins-bold text-[#0C2C55] mb-12 font-bold uppercase leading-tight">
             More Than a Vendor. <br />
             Your{" "}
@@ -808,7 +877,7 @@ autentik dan produk interior yang berkualitas.`,
               </div>
             </div>
 
-            <div className="lg:col-span-7 font-sans bg-[#EDEDCE]/40 grid grid-cols-1 md:grid-cols-2 relative">
+            <div className="lg:col-span-7 font-sans bg-white/40 grid grid-cols-1 md:grid-cols-2 relative">
               <div className="p-8 border-b border-gray-100 md:border-r group hover:bg-gray-50 transition-colors cursor-default">
                 <div className="w-10 h-10 bg-yellow-400 rounded-full mb-4 flex items-center justify-center font-bold">
                   1
@@ -853,7 +922,7 @@ autentik dan produk interior yang berkualitas.`,
           className="bg-[#0C2C55] font-sans min-h-screen flex flex-col items-center pt-20"
         >
           <div className="w-full max-w-6xl px-6 mb-12">
-            <h2 className="text-[#EDEDCE] text-left text-4xl md:text-7xl font-black tracking-tighter uppercase leading-none poppins-bold opacity-90">
+            <h2 className="text-white text-left text-4xl md:text-7xl font-black tracking-tighter uppercase leading-none poppins-bold opacity-90">
               {collaborationData.title}
             </h2>
           </div>
@@ -905,7 +974,7 @@ autentik dan produk interior yang berkualitas.`,
         {/** Partner */}
         <section
           id="partners"
-          className="relative w-full bg-[#EDEDCE] pt-24 pb-20 overflow-hidden"
+          className="relative w-full bg-white pt-24 pb-20 overflow-hidden"
         >
           <div className="relative group pt-8 z-10 w-full mx-auto px-8">
             <div className="flex flex-col md:flex-row items-center justify-between mb-12 gap-4">
@@ -939,7 +1008,7 @@ autentik dan produk interior yang berkualitas.`,
           </div>
         </section>
         {/** Collaborator */}
-        <section id="collaborator" className="py-24 bg-[#EDEDCE]">
+        <section id="collaborator" className="py-24 bg-white">
           <div className="w-full  mx-auto px-6">
             <div className="mb-12 w-auto group text-center md:text-left">
               <h2 className="text-[#0C2C55] text-5xl md:text-8xl font-black uppercase poppins-bold mb-4">
@@ -957,7 +1026,7 @@ autentik dan produk interior yang berkualitas.`,
                   onClick={() => setActiveCategory(cat)}
                   className={`px-6 py-2 rounded-full font-bold transition-all duration-300 border-2 ${
                     activeCategory === cat
-                      ? "bg-[#0C2C55] text-[#EDEDCE] border-[#0C2C55] shadow-lg scale-105"
+                      ? "bg-[#0C2C55] text-white border-[#0C2C55] shadow-lg scale-105"
                       : "bg-transparent text-[#2D6A76] border-[#6BA2B0] hover:border-[#0C2C55] hover:text-[#0C2C55]"
                   }`}
                 >
@@ -970,7 +1039,7 @@ autentik dan produk interior yang berkualitas.`,
               {filteredLogos.map((logo, index) => (
                 <div
                   key={index}
-                  className="group relative flex flex-col w-auto items-center justify-center p-6 bg-[#EDEDCE]" // Contoh background cream
+                  className="group relative flex flex-col w-auto items-center justify-center p-6 bg-white" // Contoh background cream
                 >
                   <img
                     src={logo.src}
@@ -984,11 +1053,48 @@ autentik dan produk interior yang berkualitas.`,
           </div>
         </section>
         {/** Testimoni */}
-        <section id="testimoni" className="w-full">
-          <div className="flex text-[#0C2C55] poppins-bold justify-start items-start bg-[#EDEDCE]">
-            <div className="bg-[#FAB95B] p-10 rounded-tr-[40px] relative">
-              <p className="text-4xl md:text-8xl uppercase text-[#EDEDCE] font-extrabold leading-none">
+        <section id="testimoni" className="w-full py-20">
+          <div className="flex poppins-bold justify-start items-start bg-white">
+            <div className="bg-[#6BA2B0] p-10 rounded-tr-[40px] relative">
+              <p className="text-4xl md:text-8xl uppercase text-white font-extrabold leading-none">
                 testimony
+              </p>
+
+              <div className="absolute -top-[40px] left-0 w-[40px] h-[40px] overflow-hidden">
+                <div className="w-full h-full rounded-bl-[40px] shadow-[-20px_20px_0_20px_#6BA2B0]"></div>
+              </div>
+
+              <div className="absolute bottom-0 hidden md:block -right-[40px] w-[40px] h-[40px] overflow-hidden">
+                <div className="w-full h-full rounded-bl-[40px] shadow-[-20px_20px_0_20px_#6BA2B0]"></div>
+              </div>
+            </div>
+          </div>
+          {/* Container CardSwap harus memiliki lebar yang jelas dan justify-center */}
+          <div className="relative w-full overflow-hidden bg-[#6BA2B0] py-10">
+            {/* Container Utama yang bergerak */}
+            <div className="flex w-max animate-custom-marquee pause-on-hover">
+              {/* Render Pertama */}
+              <div className="flex gap-6 px-3">
+                {reviews.map((r, index) => (
+                  <ReviewCard key={`r1-${index}`} r={r} />
+                ))}
+              </div>
+
+              {/* Duplikasi untuk Loop Tanpa Jeda */}
+              <div className="flex gap-6 px-3">
+                {reviews.map((r, index) => (
+                  <ReviewCard key={`r2-${index}`} r={r} />
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+        {/** Portofolio */}
+        <section id="portofolio" className="w-full">
+          <div className="flex text-[#0C2C55] poppins-bold justify-start items-start bg-white">
+            <div className="bg-[#FAB95B] p-10 rounded-tr-[40px] relative">
+              <p className="text-4xl md:text-8xl uppercase text-white font-extrabold leading-none">
+                Portofolio
               </p>
 
               <div className="absolute -top-[40px] left-0 w-[40px] h-[40px] overflow-hidden">
@@ -1086,13 +1192,13 @@ autentik dan produk interior yang berkualitas.`,
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-[#0C2C55]/80 -z-10"></div>
 
-          <div className="bg-[#EDEDCE] px-8 py-3 rounded-full mb-8 shadow-xl">
+          <div className="bg-white px-8 py-3 rounded-full mb-8 shadow-xl">
             <h2 className="text-[#0C2C55] font-black text-sm md:text-lg tracking-widest uppercase italic">
               {contactData.title}
             </h2>
           </div>
 
-          <div className="relative w-full max-w-5xl bg-[#EDEDCE] p-8 md:p-20 flex flex-col md:flex-row gap-12 items-center rounded-[50px] shadow-[0_0_50px_rgba(0,0,0,0.3)]">
+          <div className="relative w-full max-w-5xl bg-white p-8 md:p-20 flex flex-col md:flex-row gap-12 items-center rounded-[50px] shadow-[0_0_50px_rgba(0,0,0,0.3)]">
             <div className="flex-1 text-center md:text-left">
               <p className="text-[#0C2C55] font-bold text-xl md:text-3xl leading-tight tracking-tight">
                 {contactData.description}
@@ -1110,11 +1216,11 @@ autentik dan produk interior yang berkualitas.`,
                     <span className="text-[#0C2C55] group-hover:text-yellow-400 text-sm font-black uppercase tracking-widest mb-1 transition-colors">
                       Get in Touch
                     </span>
-                    <span className="text-[#0C2C55] group-hover:text-[#EDEDCE] group-hover:translate-x-2 transition-all text-2xl">
+                    <span className="text-[#0C2C55] group-hover:text-white group-hover:translate-x-2 transition-all text-2xl">
                       →
                     </span>
                   </div>
-                  <span className="text-2xl md:text-4xl font-black text-slate-800 group-hover:text-[#EDEDCE] tracking-tighter uppercase transition-colors">
+                  <span className="text-2xl md:text-4xl font-black text-slate-800 group-hover:text-white tracking-tighter uppercase transition-colors">
                     {action.label}
                   </span>
                 </a>

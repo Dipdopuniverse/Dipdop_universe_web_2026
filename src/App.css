@@ -126,3 +126,19 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Animasi Bergerak dari Kanan ke Kiri */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* Geser setengah karena datanya kita duplikat */
+}
+
+.animate-custom-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 120s linear infinite; /* 30s adalah durasi, makin besar makin lambat */
+}
+
+.animate-custom-marquee:hover {
+  animation-play-state: paused; /* Berhenti saat kursor di atas kartu */
+}

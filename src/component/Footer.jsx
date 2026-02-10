@@ -32,7 +32,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="w-full bg-[#EDEDCE] border-t border-gray-200 py-6 px-4 md:px-12">
+    <footer className="w-full bg-white border-t border-gray-200 py-6 px-4 md:px-12">
       <div className=" mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Kiri: Logo Section */}
         <div className="flex items-center gap-2">

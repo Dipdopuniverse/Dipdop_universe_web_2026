@@ -19,6 +19,7 @@ export function Header() {
         { name: 'Partners', href: '#partners' },
         { name: 'Collaborator', href: '#collaborator' },
         { name: 'Testimony', href: '#testimoni' },
+        { name: 'Portofolio', href: '#portofolio' },
     ];
 
     return (
