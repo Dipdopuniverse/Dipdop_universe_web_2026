@@ -1007,88 +1007,6 @@ autentik dan produk interior yang berkualitas.`,
             </div>
           </div>
         </section>
-        {/** Collaborator */}
-        <section id="collaborator" className="py-24 bg-white">
-          <div className="w-full  mx-auto px-6">
-            <div className="mb-12 w-auto group text-center md:text-left">
-              <h2 className="text-[#0C2C55] text-5xl md:text-8xl font-black uppercase poppins-bold mb-4">
-                Our <span className="text-[#0C2C55]">Network</span>
-              </h2>
-              <p className="text-slate-500 font-medium">
-                Klik kategori untuk melihat partner strategis kami
-              </p>
-            </div>
-
-            <div className="flex flex-wrap gap-3 mb-12 justify-center md:justify-start">
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setActiveCategory(cat)}
-                  className={`px-6 py-2 rounded-full font-bold transition-all duration-300 border-2 ${
-                    activeCategory === cat
-                      ? "bg-[#0C2C55] text-white border-[#0C2C55] shadow-lg scale-105"
-                      : "bg-transparent text-[#2D6A76] border-[#6BA2B0] hover:border-[#0C2C55] hover:text-[#0C2C55]"
-                  }`}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
-
-            <div className="flex flex-col md:flex-row w-auto justify-center items-center">
-              {filteredLogos.map((logo, index) => (
-                <div
-                  key={index}
-                  className="group relative flex flex-col w-auto items-center justify-center p-6 bg-white" // Contoh background cream
-                >
-                  <img
-                    src={logo.src}
-                    alt={logo.title}
-                    /* Tambahkan mix-blend-multiply di sini */
-                    className="min-h-[120px] max-h-[120px] w-auto object-contain mb-4 transition-all mix-blend-multiply"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/** Testimoni */}
-        <section id="testimoni" className="w-full py-20">
-          <div className="flex poppins-bold justify-start items-start bg-white">
-            <div className="bg-[#6BA2B0] p-10 rounded-tr-[40px] relative">
-              <p className="text-4xl md:text-8xl uppercase text-white font-extrabold leading-none">
-                testimony
-              </p>
-
-              <div className="absolute -top-[40px] left-0 w-[40px] h-[40px] overflow-hidden">
-                <div className="w-full h-full rounded-bl-[40px] shadow-[-20px_20px_0_20px_#6BA2B0]"></div>
-              </div>
-
-              <div className="absolute bottom-0 hidden md:block -right-[40px] w-[40px] h-[40px] overflow-hidden">
-                <div className="w-full h-full rounded-bl-[40px] shadow-[-20px_20px_0_20px_#6BA2B0]"></div>
-              </div>
-            </div>
-          </div>
-          {/* Container CardSwap harus memiliki lebar yang jelas dan justify-center */}
-          <div className="relative w-full overflow-hidden bg-[#6BA2B0] py-10">
-            {/* Container Utama yang bergerak */}
-            <div className="flex w-max animate-custom-marquee pause-on-hover">
-              {/* Render Pertama */}
-              <div className="flex gap-6 px-3">
-                {reviews.map((r, index) => (
-                  <ReviewCard key={`r1-${index}`} r={r} />
-                ))}
-              </div>
-
-              {/* Duplikasi untuk Loop Tanpa Jeda */}
-              <div className="flex gap-6 px-3">
-                {reviews.map((r, index) => (
-                  <ReviewCard key={`r2-${index}`} r={r} />
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
         {/** Portofolio */}
         <section id="portofolio" className="w-full">
           <div className="flex text-[#0C2C55] poppins-bold justify-start items-start bg-white">
@@ -1183,6 +1101,88 @@ autentik dan produk interior yang berkualitas.`,
               </div>
             </div>
           ))}
+        </section>
+        {/** Collaborator */}
+        <section id="collaborator" className="py-24 bg-white">
+          <div className="w-full  mx-auto px-6">
+            <div className="mb-12 w-auto group text-center md:text-left">
+              <h2 className="text-[#0C2C55] text-5xl md:text-8xl font-black uppercase poppins-bold mb-4">
+                Our <span className="text-[#0C2C55]">Network</span>
+              </h2>
+              <p className="text-slate-500 font-medium">
+                Klik kategori untuk melihat partner strategis kami
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-3 mb-12 justify-center md:justify-start">
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat)}
+                  className={`px-6 py-2 rounded-full font-bold transition-all duration-300 border-2 ${
+                    activeCategory === cat
+                      ? "bg-[#0C2C55] text-white border-[#0C2C55] shadow-lg scale-105"
+                      : "bg-transparent text-[#2D6A76] border-[#6BA2B0] hover:border-[#0C2C55] hover:text-[#0C2C55]"
+                  }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+
+            <div className="flex flex-col md:flex-row w-auto justify-center items-center">
+              {filteredLogos.map((logo, index) => (
+                <div
+                  key={index}
+                  className="group relative flex flex-col w-auto items-center justify-center p-6 bg-white" // Contoh background cream
+                >
+                  <img
+                    src={logo.src}
+                    alt={logo.title}
+                    /* Tambahkan mix-blend-multiply di sini */
+                    className="min-h-[120px] max-h-[120px] w-auto object-contain mb-4 transition-all mix-blend-multiply"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/** Testimoni */}
+        <section id="testimoni" className="w-full py-20">
+          <div className="flex poppins-bold justify-start items-start bg-white">
+            <div className="bg-[#6BA2B0] p-10 rounded-tr-[40px] relative">
+              <p className="text-4xl md:text-8xl uppercase text-white font-extrabold leading-none">
+                testimony
+              </p>
+
+              <div className="absolute -top-[40px] left-0 w-[40px] h-[40px] overflow-hidden">
+                <div className="w-full h-full rounded-bl-[40px] shadow-[-20px_20px_0_20px_#6BA2B0]"></div>
+              </div>
+
+              <div className="absolute bottom-0 hidden md:block -right-[40px] w-[40px] h-[40px] overflow-hidden">
+                <div className="w-full h-full rounded-bl-[40px] shadow-[-20px_20px_0_20px_#6BA2B0]"></div>
+              </div>
+            </div>
+          </div>
+          {/* Container CardSwap harus memiliki lebar yang jelas dan justify-center */}
+          <div className="relative w-full overflow-hidden bg-[#6BA2B0] py-10">
+            {/* Container Utama yang bergerak */}
+            <div className="flex w-max animate-custom-marquee pause-on-hover">
+              {/* Render Pertama */}
+              <div className="flex gap-6 px-3">
+                {reviews.map((r, index) => (
+                  <ReviewCard key={`r1-${index}`} r={r} />
+                ))}
+              </div>
+
+              {/* Duplikasi untuk Loop Tanpa Jeda */}
+              <div className="flex gap-6 px-3">
+                {reviews.map((r, index) => (
+                  <ReviewCard key={`r2-${index}`} r={r} />
+                ))}
+              </div>
+            </div>
+          </div>
         </section>
         {/** Contact */}
         <section
