@@ -74,6 +74,7 @@ import SpotlightCard from "./components/SpotlightCard";
 import FlowingMenu from "./components/FlowingMenu";
 import ReviewCard from "./components/ReviewCard";
 import BounceCards from "./components/BounceCards";
+import Stack from "./components/Stack";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState("All");
@@ -534,10 +535,10 @@ autentik dan produk interior yang berkualitas.`,
   ];
 
   return (
-    <>
+    <div className="max-w-full">
       <Header />
       {/** kalo mau di revisi silakan asal rapi boleh pakai AI tapi jangan 100% & didokumentasi rapi */}
-      <div className="w-full relative flex flex-col pt-20 bg-white">
+      <div className="w-full  relative flex flex-col pt-20 bg-white">
         <div className="fixed bottom-15 right-6 flex flex-col items-end gap-3 z-50">
           <div
             className={`flex flex-col gap-3 transition-all duration-300 origin-bottom ${
@@ -667,21 +668,15 @@ autentik dan produk interior yang berkualitas.`,
               perusahaan, institusi, dan organisasi yang ingin menciptakan
               pertumbuhan berkelanjutan sekaligus dampak sosial yang terukur.
             </article>
-            <div className="w-[75%] border-white border-8  md:w-full h-auto rounded-2xl overflow-hidden shadow-2xl bg-transparent ">
-              <video
-                className="w-full h-auto"
-                autoPlay
-                loop
-                playsInline
-                muted
-              >
+            <div className="md:w-[75%] border-white border-8  w-full h-auto rounded-2xl overflow-hidden shadow-2xl bg-transparent ">
+              <video className="w-full h-auto" autoPlay loop playsInline muted>
                 <source src={vid1} type="video/quicktime" />
                 <source src={vid1} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
           </div>
-          <div className="text-[#358dad] w-[50%] flex-col text-xs md:text-base  py-1 font-semibold">
+          <div className="text-[#358dad] w-[50%] h-auto flex-col text-xs md:text-base  py-1 font-semibold">
             <CurvedLoop
               marqueeText="✦ Integrated Ecosystem Approach ✦ UMKM Empowerment Platform ✦ Community & Grassroots Engagement ✦ Creative & Marketing Expertise"
               speed={2.1}
@@ -690,7 +685,7 @@ autentik dan produk interior yang berkualitas.`,
             />
 
             <BounceCards
-              className="custom-bounceCards"
+              className="hidden md:block"
               images={images}
               containerWidth={500}
               containerHeight={150}
@@ -700,6 +695,29 @@ autentik dan produk interior yang berkualitas.`,
               transformStyles={transformStyles}
               enableHover
             />
+
+            <div style={{ width: 208, height: 208 }}>
+              <Stack
+                randomRotation={false}
+                sensitivity={200}
+                sendToBackOnClick={true}
+                cards={images.map((src, i) => (
+                  <img
+                    key={i}
+                    src={src}
+                    alt={`card-${i + 1}`}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                  />
+                ))}
+                autoplay={false}
+                autoplayDelay={3000}
+                pauseOnHover={false}
+              />
+            </div>
           </div>
         </section>
         {/** Achievements */}
@@ -1284,7 +1302,7 @@ autentik dan produk interior yang berkualitas.`,
         </section>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 
