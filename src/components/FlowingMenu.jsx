@@ -120,7 +120,7 @@ function MenuItem({ link, text, image, speed, textColor, marqueeBgColor, marquee
       ref={itemRef}
       style={{ borderTop: isFirst ? 'none' : `1px solid ${borderColor}` }}>
       <a
-        className="flex items-center justify-center h-full relative cursor-pointer text-nowrap uppercase no-underline font-semibold md:text-lg text-xl"
+        className="flex items-center justify-center h-full relative cursor-pointer  uppercase no-underline font-semibold md:text-xs text-xs"
         href={link}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}

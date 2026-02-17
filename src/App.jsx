@@ -6,8 +6,14 @@ import { useEffect, useState } from "react";
 import Papa from "papaparse";
 //img
 import Team from "/grub.jpg";
-import Kemenin from "/kemenin.jpg";
-import start4 from "/startup4.jpeg";
+import Kemenin from "/kemenin.png";
+import start4 from "/startup4.png";
+import dip1 from "/dip1.jpg";
+import dip2 from "/dip2.jpg";
+import dip3 from "/dip3.jpg";
+import dip4 from "/dip4.jpg";
+import dip5 from "/dip5.jpg";
+import vid1 from "/vid1.MOV";
 //logo partner & collaborator
 import dealls from "/dealls.png";
 import kerja from "/kerja.png";
@@ -17,14 +23,13 @@ import cc from "/cc.png";
 import cakap from "/cakap.png";
 import dana from "/dana.png";
 import gocorp from "/gocorp.png";
+import grab from "/Grab.png";
 import kampus from "/kampus.png";
 import taldo from "/taldo.png";
 import voucherku from "/voucherku.png";
 import xendit from "/xendit.png";
 import tembapbelajar from "/tempatbelajar.webp";
-import tembapbelajar2 from "/Tempat_Belajar.png";
 import bankuob from "/UOB-Bank.png";
-import voucherku2 from "/voucherku2.png";
 import bankbjb from "/bank_bjb.png";
 import bankindonesia from "/Bank _indonesia.png";
 import original from "/original.webp";
@@ -68,13 +73,20 @@ import AnimatedContent from "./components/AnimatedContent";
 import SpotlightCard from "./components/SpotlightCard";
 import FlowingMenu from "./components/FlowingMenu";
 import ReviewCard from "./components/ReviewCard";
-
+import BounceCards from "./components/BounceCards";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState("All");
-  //json dari page
-
   const [reviews, setReviews] = useState([]);
+  const images = [dip1, dip2, dip3, dip4, dip5];
+
+  const transformStyles = [
+    "rotate(5deg) translate(-150px)",
+    "rotate(0deg) translate(-70px)",
+    "rotate(-5deg)",
+    "rotate(5deg) translate(70px)",
+    "rotate(-5deg) translate(150px)",
+  ];
 
   useEffect(() => {
     fetch("/review.csv")
@@ -370,9 +382,9 @@ autentik dan produk interior yang berkualitas.`,
     { src: mining, title: "GoCorp", category: "Mining" },
     { src: organizations, title: "Kampus Merdeka", category: "Organizations" },
     { src: retail, title: "Taldo", category: "Retail" },
-    { src: se, title: "Voucherku", category: "SME`S" },
     { src: smess2, title: "Xendit", category: "SME`S" },
     { src: smes, title: "Teman Belajar", category: "SME`S" },
+    { src: se, title: "Voucherku", category: "SME`S" },
     { src: startup, title: "Original", category: "Startup" },
     { src: training, title: "Original", category: "Training" },
   ];
@@ -497,8 +509,8 @@ autentik dan produk interior yang berkualitas.`,
     description:
       "KAMI TERBUKA UNTUK KOLABORASI DENGAN BRAND, PERUSAHAAN, INSTITUSI, DAN ORGANISASI YANG INGIN TUMBUH BERSAMA EKOSISTEM KREATIF DAN UMKM INDONESIA.",
     actions: [
-      { label: "START COLLABORATION", url: "#" },
-      { label: "CONTACT DIPDOP", url: "#" },
+      { label: "START COLLABORATION", url: "https://dipdop.net/hire-us/" },
+      { label: "CONTACT DIPDOP", url: "https://www.instagram.com/dipdop.id/" },
     ],
   };
 
@@ -599,7 +611,7 @@ autentik dan produk interior yang berkualitas.`,
           </div>
 
           <div className="hidden md:block"></div>
-          <div className="relative group self-end w-full h-auto md:h-fit flex flex-col bg-white p-7 md:p-10 lg:p-14 gap-6 rounded-tl-[50px]">
+          <div className="relative group self-end w-full h-auto md:h-fit flex flex-col bg-white p-7 md:p-10 lg:p-10 xl:p-11 2xl:p-14 gap-6 rounded-tl-[50px]">
             <div className="absolute -top-[50px] right-0 w-[50px] h-[50px] hidden md:block">
               <div className="w-full h-full rounded-br-[50px] shadow-[20px_20px_0_20px_white]"></div>
             </div>
@@ -607,12 +619,12 @@ autentik dan produk interior yang berkualitas.`,
             <div className="absolute bottom-0 -left-[50px] w-[50px] h-[50px] hidden md:block">
               <div className="w-full h-full rounded-br-[50px] shadow-[20px_20px_0_20px_white]"></div>
             </div>
-            <h1 className="roboto-a text-2xl lg:text-5xl text-[#0C2C55] font-bold leading-tight">
+            <h1 className="roboto-a text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-[#0C2C55] font-bold leading-tight">
               Membangun Brand, Menggerakkan UMKM, Menciptakan Dampak Nyata
             </h1>
 
-            <article className="text-sm font-sans lg:text-lg font-medium text-[#0C2C55] max-w-xl">
-              <span className="text-[#296374] font-bold transition-all duration-300  group-hover:underline">
+            <article className="text-sm font-sans lg:text-lg font-medium text-black max-w-xl">
+              <span className="text-black font-bold transition-all duration-300  group-hover:underline">
                 PT DIPDOP UNIVERSE CORP
               </span>{" "}
               adalah holding company berbasis ekosistem kreatif yang
@@ -621,13 +633,13 @@ autentik dan produk interior yang berkualitas.`,
 
             <div className="flex flex-wrap gap-4 mt-2">
               <a
-                href="#"
+                href="https://dipdop.net/our-works/"
                 className="px-8 py-3 bg-[#6BA2B0] hover:bg-[#0C2C55] text-white rounded-full font-bold transition-all shadow-lg hover:shadow-none"
               >
                 Explore Ecosystem →
               </a>
               <a
-                href="#"
+                href="https://dipdop.net/hire-us/"
                 className="px-8 py-3 border-2 border-[#6BA2B0] text-[#6BA2B0] hover:bg-[#6BA2B0] hover:text-white rounded-full font-bold transition-all"
               >
                 Collaborate →
@@ -638,13 +650,13 @@ autentik dan produk interior yang berkualitas.`,
         {/** Overview */}
         <section
           id="overview"
-          className="w-full h-auto md:h-lvh flex flex-col md:flex-row gap-7 md:gap-20 justify-center items-center px-1 py-2 md:px-5 md:py-10 bg-white text-[#0C2C55] "
+          className="w-full h-auto md:h-auto flex flex-col md:flex-row gap-7 md:gap-20 justify-center items-center px-1 py-2 md:px-5 md:py-10 bg-white text-[#0C2C55] "
         >
-          <div className="w-auto md:w-[50%] h-auto md:h-lvh p-3 md:p-10 flex flex-col items-start gap-5">
+          <div className="w-auto md:w-[50%] h-auto md:h-auto p-3 md:p-10 flex flex-col items-start gap-5">
             <h1 className="w-auto font-bold text-[#0C2C55] poppins-bold text-2xl md:text-6xl lg:text-8xl">
               TENTANG DIPDOP UNIVERSE CORP
             </h1>
-            <article className="text-sm font-sans text-gray-900 lg:text-lg font-bold md:text-lg ">
+            <article className="text-sm font-sans text-black lg:text-lg  md:text-lg ">
               PT DIPDOP UNIVERSE CORP merupakan holding company yang menaungi
               berbagai unit usaha di bidang kreatif, media, dan pemberdayaan
               UMKM. Kami berfokus pada pengembangan ekosistem kolaboratif yang
@@ -655,13 +667,38 @@ autentik dan produk interior yang berkualitas.`,
               perusahaan, institusi, dan organisasi yang ingin menciptakan
               pertumbuhan berkelanjutan sekaligus dampak sosial yang terukur.
             </article>
+            <div className="w-[75%] border-white border-8  md:w-full h-auto rounded-2xl overflow-hidden shadow-2xl bg-transparent ">
+              <video
+                className="w-full h-auto"
+                autoPlay
+                loop
+                playsInline
+                muted
+              >
+                <source src={vid1} type="video/quicktime" />
+                <source src={vid1} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
-          <div className="text-[#358dad] w-[50%] text-xs md:text-base  py-1 font-semibold">
+          <div className="text-[#358dad] w-[50%] flex-col text-xs md:text-base  py-1 font-semibold">
             <CurvedLoop
               marqueeText="✦ Integrated Ecosystem Approach ✦ UMKM Empowerment Platform ✦ Community & Grassroots Engagement ✦ Creative & Marketing Expertise"
               speed={2.1}
               curveAmount={250}
               interactive
+            />
+
+            <BounceCards
+              className="custom-bounceCards"
+              images={images}
+              containerWidth={500}
+              containerHeight={150}
+              animationDelay={1}
+              animationStagger={0.08}
+              easeType="elastic.out(1, 0.5)"
+              transformStyles={transformStyles}
+              enableHover
             />
           </div>
         </section>
@@ -685,7 +722,7 @@ autentik dan produk interior yang berkualitas.`,
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
               <div className="group relative bg-[#6BA2B0] p-1 rounded-[40px] shadow-lg hover:shadow-2xl transition-all duration-500">
                 <div className="bg-white rounded-[36px] p-8 flex flex-col items-center text-center h-full">
-                  <div className="h-24 flex items-center justify-center mb-6">
+                  <div className="w-[60%] flex items-center justify-center mb-6">
                     <img
                       src={start4}
                       alt="Startup4Industry"
@@ -693,7 +730,7 @@ autentik dan produk interior yang berkualitas.`,
                     />
                   </div>
                   <div className="w-full bg-[#6BA2B0] py-6 px-4 rounded-3xl text-white relative">
-                    <p className="uppercase tracking-[0.2em] text-xl font-bold opacity-80">
+                    <p className="uppercase tracking-[0.2em] text-xl font-bold">
                       Finalis Startup
                     </p>
                   </div>
@@ -702,7 +739,7 @@ autentik dan produk interior yang berkualitas.`,
 
               <div className="group relative bg-[#6BA2B0] p-1 rounded-[40px] shadow-lg hover:shadow-2xl transition-all duration-500">
                 <div className="bg-white rounded-[36px] p-8 flex flex-col items-center text-center h-full">
-                  <div className="h-24 flex items-center justify-center mb-6">
+                  <div className="w-[60%] flex items-center justify-center mb-6">
                     <img
                       src={Kemenin}
                       alt="Kemenperin"
@@ -711,7 +748,7 @@ autentik dan produk interior yang berkualitas.`,
                   </div>
                   <div className="w-full bg-[#6BA2B0] py-6 px-4 rounded-3xl text-white relative">
                     <p className="text-lg md:text-xl font-black uppercase leading-tight">
-                      Penerima Dana <br /> Hibah Implementasi
+                      Penerima Dana Hibah Implementasi
                     </p>
                   </div>
                 </div>
@@ -727,7 +764,7 @@ autentik dan produk interior yang berkualitas.`,
                   {[
                     cakap,
                     tembapbelajar,
-                    voucherku2,
+                    grab,
                     bankbjb,
                     bankindonesia,
                     bankuob,
@@ -841,7 +878,7 @@ autentik dan produk interior yang berkualitas.`,
                   rel="noopener noreferrer"
                   className="mt-8 inline-flex bg-white text-[#358dad] px-6 py-3 rounded-4xl items-center gap-2 font-bold text-sm hover:bg-[#358dad] hover:text-white text-center transition-colors"
                 >
-                  VISIT WEBSITE <span className=" text-lg">→</span>
+                  LEARN MORE <span className=" text-lg">→</span>
                 </a>
               </div>
             ))}
@@ -994,7 +1031,7 @@ autentik dan produk interior yang berkualitas.`,
                 <LogoLoop
                   logos={partnerLogos}
                   speed={40}
-                  direction="eft"
+                  direction="left"
                   logoHeight={50}
                   gap={100}
                   hoverSpeed={10}
@@ -1129,22 +1166,37 @@ autentik dan produk interior yang berkualitas.`,
                 </button>
               ))}
             </div>
-
-            <div className="flex flex-col md:flex-row w-auto justify-center items-center">
-              {filteredLogos.map((logo, index) => (
-                <div
-                  key={index}
-                  className="group relative flex flex-col w-auto items-center justify-center p-6 bg-white" // Contoh background cream
-                >
-                  <img
-                    src={logo.src}
-                    alt={logo.title}
-                    /* Tambahkan mix-blend-multiply di sini */
-                    className="min-h-[120px] max-h-[120px] w-auto object-contain mb-4 transition-all mix-blend-multiply"
-                  />
-                </div>
-              ))}
-            </div>
+            {activeCategory === "All" ? (
+              <div className="relative overflow-hidden h-[180px] flex items-start">
+                <LogoLoop
+                  logos={colaboratorLogo}
+                  speed={40}
+                  direction="left"
+                  logoHeight={80}
+                  gap={100}
+                  hoverSpeed={10}
+                  scaleOnHover
+                  fadeOut
+                  fadeOutColor="#ffffff"
+                  ariaLabel="Technology partners"
+                />
+              </div>
+            ) : (
+              <div className="flex flex-col md:flex-row w-auto justify-center items-center">
+                {filteredLogos.map((logo, index) => (
+                  <div
+                    key={index}
+                    className="group relative flex flex-col w-auto items-center justify-center p-6 bg-white"
+                  >
+                    <img
+                      src={logo.src}
+                      alt={logo.title}
+                      className="min-h-[120px] max-h-[120px] w-auto object-contain mb-4 transition-all mix-blend-multiply"
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </section>
         {/** Testimoni */}
