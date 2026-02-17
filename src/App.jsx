@@ -82,11 +82,11 @@ function App() {
   const images = [dip1, dip2, dip3, dip4, dip5];
 
   const transformStyles = [
-    "rotate(5deg) translate(-150px)",
-    "rotate(0deg) translate(-70px)",
-    "rotate(-5deg)",
-    "rotate(5deg) translate(70px)",
-    "rotate(-5deg) translate(150px)",
+    "rotate(10deg) translate(-150px)",
+    "rotate(5deg) translate(-75px)",
+    "rotate(-3deg)",
+    "rotate(-10deg) translate(75px)",
+    "rotate(2deg) translate(150px)",
   ];
 
   useEffect(() => {
@@ -668,7 +668,7 @@ autentik dan produk interior yang berkualitas.`,
               perusahaan, institusi, dan organisasi yang ingin menciptakan
               pertumbuhan berkelanjutan sekaligus dampak sosial yang terukur.
             </article>
-            <div className="md:w-[75%] border-white border-8  w-full h-auto rounded-2xl overflow-hidden shadow-2xl bg-transparent ">
+            <div className=" border-white border-8  w-full md:w-[80%] h-auto rounded-2xl overflow-hidden shadow-2xl bg-transparent ">
               <video className="w-full h-auto" autoPlay loop playsInline muted>
                 <source src={vid1} type="video/quicktime" />
                 <source src={vid1} type="video/mp4" />
@@ -676,7 +676,7 @@ autentik dan produk interior yang berkualitas.`,
               </video>
             </div>
           </div>
-          <div className="text-[#358dad] w-[50%] h-auto flex-col text-xs md:text-base  py-1 font-semibold">
+          <div className="text-[#358dad] w-[50%] justify-center items-center h-auto flex-col text-xs md:text-base  py-1 font-semibold">
             <CurvedLoop
               marqueeText="✦ Integrated Ecosystem Approach ✦ UMKM Empowerment Platform ✦ Community & Grassroots Engagement ✦ Creative & Marketing Expertise"
               speed={2.1}
@@ -686,9 +686,9 @@ autentik dan produk interior yang berkualitas.`,
 
             <BounceCards
               className="hidden md:block"
+              containerWidth={500} 
+              containerHeight={400}
               images={images}
-              containerWidth={500}
-              containerHeight={150}
               animationDelay={1}
               animationStagger={0.08}
               easeType="elastic.out(1, 0.5)"
@@ -696,7 +696,10 @@ autentik dan produk interior yang berkualitas.`,
               enableHover
             />
 
-            <div style={{ width: 208, height: 208 }}>
+            <div
+              className="md:hidden block"
+              style={{ width: 208, height: 208 }}
+            >
               <Stack
                 randomRotation={false}
                 sensitivity={200}
