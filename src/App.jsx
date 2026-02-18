@@ -398,17 +398,14 @@ autentik dan produk interior yang berkualitas.`,
         "DIPDOP Agency menyediakan solusi kreatif dan pemasaran digital untuk brand, UMKM, dan institusi. Kami membantu perencanaan strategi komunikasi, kampanye digital, serta aktivasi berbasis komunitas yang relevan dan berdampak.",
       scopes: [
         {
-          link: "https://dipdop.net",
           text: "Digital marketing & campaign",
           image: "https://picsum.photos/600/400?random=1",
         },
         {
-          link: "https://dipdop.net",
           text: "Branding & content strategy",
           image: "https://picsum.photos/600/400?random=2",
         },
         {
-          link: "https://dipdop.net",
           text: "Event & community activation",
           image: "https://picsum.photos/600/400?random=3",
         },
@@ -423,17 +420,14 @@ autentik dan produk interior yang berkualitas.`,
         "DIPDOP Merch menghadirkan produk merchandise sebagai media komunikasi brand, identitas komunitas, serta sarana kolaborasi kreatif dalam berbagai kampanye dan kegiatan.",
       scopes: [
         {
-          link: "https://www.ciptaloka.com/+dipdop/",
           text: "Limited collaboration items",
           image: "https://picsum.photos/600/400?random=1",
         },
         {
-          link: "https://www.ciptaloka.com/+dipdop/",
           text: "Custom product untuk brand & CSR",
           image: "https://picsum.photos/600/400?random=2",
         },
         {
-          link: "https://www.ciptaloka.com/+dipdop/",
           text: "Merchandise komunitas & event",
           image: "https://picsum.photos/600/400?random=3",
         },
@@ -448,17 +442,14 @@ autentik dan produk interior yang berkualitas.`,
         "DIPDOP Community merupakan ruang kolaboratif bagi pelaku UMKM, anak muda, kreator, dan komunitas untuk bertumbuh melalui program edukasi, diskusi, dan kolaborasi lintas sektor.",
       scopes: [
         {
-          link: "https://www.instagram.com/dipdop.community",
           text: "Webinar & kelas edukasi",
           image: "https://picsum.photos/600/400?random=1",
         },
         {
-          link: "https://www.instagram.com/dipdop.community",
           text: "Program komunitas & mentoring",
           image: "https://picsum.photos/600/400?random=2",
         },
         {
-          link: "https://www.instagram.com/dipdop.community",
           text: "Kolaborasi brand & CSR",
           image: "https://picsum.photos/600/400?random=3",
         },
@@ -473,17 +464,14 @@ autentik dan produk interior yang berkualitas.`,
         "UMKM Update adalah media digital yang berfokus pada edukasi, informasi, dan eksposur UMKM. Media ini menjadi kanal distribusi konten, kampanye, dan pesan brand yang ingin menjangkau pelaku usaha secara langsung.",
       scopes: [
         {
-          link: "https://www.instagram.com/umkmupdate.id",
           text: "Edukasi & insight UMKM",
           image: "https://picsum.photos/600/400?random=1",
         },
         {
-          link: "https://www.instagram.com/umkmupdate.id",
           text: "Promosi & storytelling",
           image: "https://picsum.photos/600/400?random=2",
         },
         {
-          link: "https://www.instagram.com/umkmupdate.id",
           text: "Kampanye kolaboratif",
           image: "https://picsum.photos/600/400?random=3",
         },
@@ -634,7 +622,7 @@ autentik dan produk interior yang berkualitas.`,
 
             <div className="flex flex-wrap gap-4 mt-2">
               <a
-                href="https://dipdop.net/our-works/"
+                href="https://dipdop.net"
                 className="px-8 py-3 bg-[#6BA2B0] hover:bg-[#0C2C55] text-white rounded-full font-bold transition-all shadow-lg hover:shadow-none"
               >
                 Explore Ecosystem →
@@ -668,15 +656,15 @@ autentik dan produk interior yang berkualitas.`,
               perusahaan, institusi, dan organisasi yang ingin menciptakan
               pertumbuhan berkelanjutan sekaligus dampak sosial yang terukur.
             </article>
-            <div className=" border-white border-8  w-full md:w-[80%] h-auto rounded-2xl overflow-hidden shadow-2xl bg-transparent ">
-              <video className="w-full h-auto" autoPlay loop playsInline muted>
+            <div className=" border-white border-8  w-full  h-auto rounded-2xl overflow-hidden shadow-2xl bg-transparent ">
+              <video className="w-full h-auto" controls loop playsInline>
                 <source src={vid1} type="video/quicktime" />
                 <source src={vid1} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
           </div>
-          <div className="text-[#358dad] w-[50%] justify-center items-center h-auto flex-col text-xs md:text-base  py-1 font-semibold">
+          <div className="text-[#358dad] w-[50%] justify-center items-center gap-auto flex h-auto flex-col text-xs md:text-base  py-1 font-semibold">
             <CurvedLoop
               marqueeText="✦ Integrated Ecosystem Approach ✦ UMKM Empowerment Platform ✦ Community & Grassroots Engagement ✦ Creative & Marketing Expertise"
               speed={2.1}
@@ -685,7 +673,7 @@ autentik dan produk interior yang berkualitas.`,
             />
 
             <BounceCards
-              className="hidden md:block"
+              className="hidden justify-center items-center md:block"
               containerWidth={500} 
               containerHeight={400}
               images={images}
@@ -751,7 +739,7 @@ autentik dan produk interior yang berkualitas.`,
                     />
                   </div>
                   <div className="w-full bg-[#6BA2B0] py-6 px-4 rounded-3xl text-white relative">
-                    <p className="uppercase tracking-[0.2em] text-xl font-bold">
+                    <p className="uppercase tracking-[0.2em] text-xl ">
                       Finalis Startup
                     </p>
                   </div>
@@ -768,7 +756,7 @@ autentik dan produk interior yang berkualitas.`,
                     />
                   </div>
                   <div className="w-full bg-[#6BA2B0] py-6 px-4 rounded-3xl text-white relative">
-                    <p className="text-lg md:text-xl font-black uppercase leading-tight">
+                    <p className="uppercase tracking-[0.2em] text-xl ">
                       Penerima Dana Hibah Implementasi
                     </p>
                   </div>
@@ -1070,7 +1058,7 @@ autentik dan produk interior yang berkualitas.`,
           <div className="flex text-[#0C2C55] poppins-bold justify-start items-start bg-white">
             <div className="bg-[#FAB95B] p-10 rounded-tr-[40px] relative">
               <p className="text-4xl md:text-8xl uppercase text-white font-extrabold leading-none">
-                Portofolio
+                Portofollio
               </p>
 
               <div className="absolute -top-[40px] left-0 w-[40px] h-[40px] overflow-hidden">
