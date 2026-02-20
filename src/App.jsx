@@ -848,10 +848,10 @@ autentik dan produk interior yang berkualitas.`,
                   <div className="block w-full h-auto 2xl:hidden">
                     <ShinyText
                       text={d.category}
-                      speed={4}
+                      speed={3}
                       className="font-bold roboto-a "
                       delay={0}
-                      color="white"
+                      color="#6BA2B0"
                       shineColor="#ffffff"
                       spread={120}
                       direction="left"
@@ -1086,7 +1086,7 @@ autentik dan produk interior yang berkualitas.`,
                 animateOpacity
                 scale={1}
                 threshold={0.1}
-                delay={0}
+                delay={0.5}
               >
                 <div className="w-full z-10">
                   <img src={t.img} alt={t.title} className="w-full h-auto" />
@@ -1102,7 +1102,7 @@ autentik dan produk interior yang berkualitas.`,
                   animateOpacity
                   scale={1}
                   threshold={0.1}
-                  delay={0}
+                  delay={0.5}
                 >
                   <SpotlightCard
                     className="p-6 md:p-10 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl shadow-2xl max-h-[70vh] md:max-h-none overflow-y-auto custom-scrollbar"
