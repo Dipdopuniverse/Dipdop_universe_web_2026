@@ -1058,7 +1058,7 @@ autentik dan produk interior yang berkualitas.`,
           <div className="flex text-[#0C2C55] poppins-bold justify-start items-start bg-white">
             <div className="bg-[#FAB95B] p-10 rounded-tr-[40px] relative">
               <p className="text-4xl md:text-8xl uppercase text-white font-extrabold leading-none">
-                Portofollio
+                Portfolio
               </p>
 
               <div className="absolute -top-[40px] left-0 w-[40px] h-[40px] overflow-hidden">
