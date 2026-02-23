@@ -100,7 +100,7 @@ const CurvedLoop = ({
 
   return (
     <div
-      className="h-auto md:min-h-screen flex items-center justify-center w-full"
+      className="h-auto m-20 flex items-center justify-center w-full"
       style={{ visibility: ready ? 'visible' : 'hidden', cursor: cursorStyle }}
       onPointerDown={onPointerDown}
       onPointerMove={onPointerMove}
