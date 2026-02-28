@@ -1,7 +1,7 @@
 import LogoLoop from "@/components/LogoLoop";
 import dealls from "/dealls.png";
 import kerja from "/kerja.png";
-import glint from "/glint.jpg";
+import glint from "/glint.png";
 import pijar from "/pijar.png";
 import cc from "/cc.png";
 import cakap from "/cakap.png";
@@ -13,6 +13,8 @@ import voucherku from "/voucherku.png";
 import xendit from "/xendit.png";
 import tembapbelajar from "/tempatbelajar.webp";
 import original from "/original.webp";
+import harisenin from "/harisenin1.png";
+import Eduwork from "/eduwork1.png";
 
 export function Partner() {
       const partnerLogos = [
@@ -30,6 +32,8 @@ export function Partner() {
         { src: xendit, title: "Xendit", href: "" },
         { src: tembapbelajar, title: "Teman Belajar", href: "" },
         { src: original, title: "Original", href: "" },
+        { src: harisenin, title: "Harisenin", href: "" },
+        { src: Eduwork, title: "Eduwork", href: "" },
       ];
   return (
     <>
@@ -57,8 +61,8 @@ export function Partner() {
                 logos={partnerLogos}
                 speed={40}
                 direction="left"
-                logoHeight={50}
-                gap={100}
+                logoHeight={55}
+                gap={80}
                 hoverSpeed={10}
                 scaleOnHover
                 fadeOut

@@ -2,7 +2,8 @@ import LogoLoop from "@/components/LogoLoop";
 import agriculture from "/agriculture.png";
 import banking from "/banking.png";
 import consulting from "/consulting.png";
-import educational from "/educational.png";
+import educational1 from "/edu1.png";
+import educational2 from "/edu2.png";
 import fnb from "/fnb.png";
 import goverment from "/goverment.png";
 import hotel from "/hotel.png";
@@ -22,7 +23,8 @@ export function Collaborator() {
     { src: agriculture, title: "Dealls", category: "Agriculture" },
     { src: banking, title: "IKERJA", category: "Banking" },
     { src: consulting, title: "Glints", category: "Consulting" },
-    { src: educational, title: "Pijar Mahir", category: "educational" },
+    { src: educational1, title: "Pijar Mahir", category: "Educational" },
+    { src: educational2, title: "Pijar Mahir", category: "Educational" },
     { src: fnb, title: "Cerdas Cermat", category: "FNB" },
     { src: goverment, title: "Cakap", category: "Goverment" },
     { src: hotel, title: "DANA", category: "Hotel" },
@@ -40,6 +42,7 @@ export function Collaborator() {
       ? colaboratorLogo
       : colaboratorLogo.filter((logo) => logo.category === activeCategory);
   const categories = [
+    "Educational",
     "Training",
     "Startup",
     "SME`S",
@@ -88,12 +91,13 @@ export function Collaborator() {
                 logos={colaboratorLogo}
                 speed={40}
                 direction="left"
-                logoHeight={80}
-                gap={100}
+                logoHeight={50}
+                gap={80}
                 hoverSpeed={10}
                 scaleOnHover
                 fadeOut
                 fadeOutColor="#ffffff"
+                className="max-w-[140px] object-contain grayscale hover:grayscale-0 transition-all"
                 ariaLabel="Technology partners"
               />
             </div>
