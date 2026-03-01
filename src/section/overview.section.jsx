@@ -50,7 +50,7 @@ export function Overview() {
             </video>
           </div>
         </div>
-        <div className="text-[#358dad] w-[50%]  justify-center items-center flex h-auto flex-col text-xs md:text-base  py-1 font-semibold">
+        <div className="text-[#358dad] w-[80%] md:w-[50%]  justify-center items-center flex h-auto flex-col text-xs md:text-base  py-1 font-semibold">
           <div className="w-full h-auto p-1">
             <img
               src={BuSopy}
