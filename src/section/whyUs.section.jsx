@@ -1,5 +1,7 @@
-import { ArrowBigRight, ArrowBigRightDashIcon } from "lucide-react";
-import { title } from "motion/react-client";
+import brand from "/brand.png"
+import commuity from "/community-i.png"
+import government from "/government-i.png"
+import umkm from "/umkm-i.png"
 
 export function WhyUs() {
   const collaborationData = {
@@ -13,20 +15,24 @@ export function WhyUs() {
     plus: [
       {
         title: " Jika Anda Brand / Perusahaan",
+        logo: brand,
         description:
           "Kami membantu Anda menjangkau UMKM & komunitas secara autentik",
       },
       {
         title: "Jika Anda UMKM",
+        logo: umkm,
         description: "Kami menyediakan akses edukasi eksposur, dan kolaborasi",
       },
       {
         title: "Jika Anda Komunitas",
+        logo: commuity,
         description:
           "Kami membuka ruang pertumbuhan dan kolaborasi lintas sektor",
       },
       {
         title: "Jika Anda Pemerintah / Instansi Publik",
+        logo: government,
         description:
           "DIPDOP siap menjadi mitra pelaksana program pelatihan, pendampingan, dan pemberdayaan UMKM berbasis komunitas. Kami membantu implementasi kegiatan agar lebih partisipatif terukur dan berdampak langsung pada masyarakat",
       },
@@ -97,25 +103,26 @@ export function WhyUs() {
               <div
                 key={index}
                 className="group border-2 p-8 md:p-12 backdrop-blur-sm rounded-[40px] relative overflow-hidden cursor-default backdrop-blur-sm border-white
-      bg-gradient-to-l from-transparent via-white to-white
-      bg-[length:200%_50%] 
-      bg-[position:-100%_0] 
-      transition-all duration-700 ease-in-out 
-      hover:bg-[position:-0%_0]
-      min-h-[180px] flex items-center"
+                           bg-gradient-to-l from-transparent via-white to-white
+                           bg-[length:200%_50%] 
+                           bg-[position:-100%_0] 
+                           transition-all duration-700 ease-in-out 
+                           hover:bg-[position:-0%_0]
+                           min-h-[180px] flex items-center"
               >
                 <div className="relative w-full z-10">
                   <h3
-                    className="text-xl underline underline-offset-2 md:text-2xl font-bold tracking-tight leading-tight text-white
-          group-hover:text-white group-hover:-translate-y-2 transition-all duration-500 text-end group-hover:hidden"
+                    className="text-xl underline underline-offset-2 md:text-2xl flex justify-between items-center font-bold tracking-tight leading-tight text-white
+                             group-hover:text-white group-hover:-translate-y-2 transition-all duration-500 text-end group-hover:hidden"
                   >
+                    <img src={item.logo} alt={item.title} className="max-h-[80px] aspect-square p-2" />
                     {item.title}
                   </h3>
                   <p
                     className="text-lg md:text-base font-medium text-black
-          absolute left-full top-0 w-full
-          opacity-0 group-hover:opacity-100 group-hover:relative group-hover:left-0
-          transition-all duration-700 ease-in-out leading-relaxed text-start"
+                              absolute left-full top-0 w-full
+                              opacity-0 group-hover:opacity-100 group-hover:relative group-hover:left-0
+                              transition-all duration-700 ease-in-out leading-relaxed text-start"
                   >
                     {item.description}
                   </p>

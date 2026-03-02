@@ -97,7 +97,7 @@ export function Collaborator() {
                 scaleOnHover
                 fadeOut
                 fadeOutColor="#ffffff"
-                className="max-w-[140px] object-contain grayscale hover:grayscale-0 transition-all"
+                className="object-contain transition-all"
                 ariaLabel="Technology partners"
               />
             </div>

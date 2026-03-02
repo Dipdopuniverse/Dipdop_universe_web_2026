@@ -12,8 +12,19 @@ import rajasamas from "/rajasamas.png";
 import seven from "/seven.png";
 import tjakrawala from "/tjakrawala.png";
 import yp2n from "/yp2n.png";
+import etikalingkungan from "/etikalingkungan.png";
+import qeez from "/qeez.png";
+import coffeeppt from "/coffeeppt.png";
+import anakdebu from "/anakdebu.jpg";
+import gorengan from "/gorengan.jpg";
+import leimena from "/leimena.jpg";
+import skippy from "/skippy.jpg";
+import workshop from "/workshop.jpg";
+import mencintaisederhana from "/mencintaisederhana.jpg";
+import { useState } from "react";
 
 export function Portofolio() {
+  const [activeCategory, setActiveCategory] = useState("Landing page");
   const testimoni = [
     {
       id: 1,
@@ -270,31 +281,164 @@ export function Portofolio() {
       year: "2024",
       img: rajasamas,
     },
+    {
+      id: 13,
+      title: "Institut Leimena",
+      color: "#0C2C55",
+      category: "Design Portfolio",
+      about:
+        "Desain roll banner yang dirancang untuk menyajikan profil perusahaan dengan jelas dan profesional. Mencakup informasi kunci tentang visi, misi, program kegiatan, serta informasi kontak untuk memperkenalkan organisasi kepada publik dan mitra potensial dengan layout yang mudah dibaca.",
+      link: null,
+      year: "2024",
+      img: leimena,
+    },
+    {
+      id: 14,
+      title: "Skippy Peanut Butter",
+      color: "#004B91",
+      category: "Design Portfolio",
+      about:
+        "Desain roll banner yang menonjolkan produk utama Skippy dengan tampilan menarik dan menggugah selera. Menampilkan berbagai varian produk (creamy & chunky), keunggulan bahan baku, serta saran penyajian untuk menarik perhatian konsumen.",
+      link: null,
+      year: "2024",
+      img: skippy,
+    },
+    {
+      id: 15,
+      title: "Gorengan Maknyus",
+      color: "#E31E24",
+      category: "Design Portfolio",
+      about:
+        "Banner yang dirancang untuk menonjolkan kelezatan produk gorengan seperti bakwan, risol, dan pastel. Fokus pada visual yang menggugah selera, informasi cita rasa, tekstur renyah, serta penawaran spesial untuk meningkatkan daya tarik di lokasi ritel.",
+      link: null,
+      year: "2024",
+      img: gorengan,
+    },
+    {
+      id: 16,
+      title: "Qeez! Magazine",
+      color: "#FF007F",
+      category: "Book Publishing Portfolio",
+      about:
+        "Desain cover majalah dengan konsep modern dan dinamis. Menggunakan visual yang berani, tipografi kreatif, dan palet warna vibrant untuk mencerminkan energi serta vibrasi kuat agar menonjol di rak buku.",
+      link: null,
+      year: "2024",
+      img: qeez,
+    },
+    {
+      id: 17,
+      title: "Anak Debu",
+      color: "#4A4A4A",
+      category: "Book Publishing Portfolio",
+      about:
+        "Desain cover yang menonjolkan nuansa puitis dan reflektif. Menggunakan ilustrasi sentral yang evocative, tipografi elegan, dan palet warna sederhana untuk mencerminkan kedalaman narasi buku.",
+      link: null,
+      year: "2024",
+      img: anakdebu,
+    },
+    {
+      id: 18,
+      title: "Untuk Mencintai Sederhana",
+      color: "#BCC6CC",
+      category: "Book Publishing Portfolio",
+      about:
+        "Konsep desain yang bersih dan minimalis untuk menonjolkan keindahan dalam kesederhanaan. Menggunakan warna-warna tenang dan layout yang damai sesuai dengan tema buku yang penuh makna.",
+      link: null,
+      year: "2024",
+      img: mencintaisederhana,
+    },
+    {
+      id: 19,
+      title: "Sajogyo Institute",
+      color: "#1B5E20",
+      category: "Workshop",
+      about:
+        "Wahana belajar-bertindak-bersama dalam produksi pengetahuan tentang masalah agraria, lingkungan, kemiskinan, dan pembaruan pedesaan di Indonesia.",
+      link: "https://youtu.be/Lfx8TXr0_Hc",
+      year: "2023",
+      img: workshop,
+    },
+    {
+      id: 20,
+      title: "Kecamatan Sumbersari",
+      color: "#0288D1",
+      category: "Workshop",
+      about:
+        "Dokumentasi dan publikasi kegiatan workshop untuk berbagai kelurahan di Kecamatan Sumbersari meliputi Tegal Gede, Antirogo, Kranjingan, Kebonsari, dan Karangrejo.",
+      link: "https://www.instagram.com/reel/CtyO6YFrJit/",
+      year: "2023",
+      img: workshop,
+    },
+    {
+      id: 23,
+      title: "Etika Lingkungan (Dr. Rina Mardiana)",
+      color: "#388E3C",
+      category: "Video Portfolio",
+      about:
+        "Produksi video edukasi yang informatif dan engaging mengenai prinsip etika lingkungan. Mengintegrasikan grafik profesional, footage relevan, dan elemen interaktif seperti kuis untuk memfasilitasi pembelajaran efektif.",
+      link: null,
+      year: "2024",
+      img: etikalingkungan,
+    },
+    {
+      id: 24,
+      title: "Coffee Plantation Investment",
+      color: "#6D4C41",
+      category: "Translation Portfolio",
+      about:
+        "Presentasi profesional untuk proposisi investasi industri kopi. Mencakup desain slide dengan infografis data pasar, proyeksi keuangan, dan layanan penerjemahan untuk audiens internasional.",
+      link: null,
+      year: "2024",
+      img: coffeeppt,
+    },
+  ];
+  const filteredPortofolio = testimoni.filter(
+    (f) => f.category === activeCategory,
+  );
+  const categories = [
+    "Landing page",
+    "Social media management",
+    "Design Portfolio",
+    "Workshop",
+    "Video Portfolio",
+    "Book Publishing Portfolio",
+    "Translation Portfolio"
   ];
   return (
     <>
       {/** Portofolio */}
-      <section id="portofolio" className="w-full">
-        <div className="flex text-[#0C2C55] poppins-bold justify-start items-start bg-white">
-          <div className="bg-[#FAB95B] p-10 rounded-tr-[40px] relative">
-            <p className="text-4xl md:text-8xl uppercase text-white font-extrabold leading-none">
-              Portfolio
-            </p>
-
-            <div className="absolute -top-[40px] left-0 w-[40px] h-[40px] overflow-hidden">
-              <div className="w-full h-full rounded-bl-[40px] shadow-[-20px_20px_0_20px_#FAB95B]"></div>
-            </div>
-
-            <div className="absolute bottom-0 hidden md:block -right-[40px] w-[40px] h-[40px] overflow-hidden">
-              <div className="w-full h-full rounded-bl-[40px] shadow-[-20px_20px_0_20px_#FAB95B]"></div>
-            </div>
+      <section id="portofolio" className="w-full flex flex-col gap-4">
+        <div className="flex group px-6 flex-col md:flex-row items-center justify-between mb-12 gap-4">
+          <div>
+            <h2 className="text-[#0C2C55] text-4xl md:text-8xl font-black tracking-tighter uppercase poppins-bold">
+              Portofolio
+            </h2>
+            <div className="h-1.5 bg-[#6BA2B0] w-16 transition-all duration-500 group-hover:w-full"></div>
           </div>
         </div>
-        {testimoni.map((t) => (
+        <div className="flex px-6 flex-wrap gap-2  ">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={`px-6 py-2 rounded-full text-xs md:text-sm font-bold transition-all duration-300 border-2 ${
+                activeCategory === cat
+                  ? "bg-[#0C2C55] text-white border-[#0C2C55] scale-105 shadow-lg"
+                  : "bg-transparent text-[#0C2C55] border-[#0C2C55]/20 hover:border-[#0C2C55]"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+        {filteredPortofolio.map((t) => (
           <div
             key={t.id}
-            style={{ backgroundColor: t.color || "#333" }}
-            className=" w-full min-h-screen flex flex-col md:flex-row md:justify-around md:items-center md:p-8 sticky top-0"
+            style={{
+              backgroundImage: `radial-gradient(circle at top left, rgba(255,255,255,0.5) 0%, ${t.color || "#1CAF49"} 100%)`,
+              backgroundColor: t.color || "#1CAF49",
+            }}
+            className="w-full min-h-screen flex flex-col md:flex-row md:justify-around md:items-center md:p-8 sticky top-0"
           >
             <AnimatedContent
               distance={100}
@@ -309,7 +453,11 @@ export function Portofolio() {
               delay={0.5}
             >
               <div className="w-full z-10">
-                <img src={t.img} alt={t.title} className="w-full h-auto" />
+                <img
+                  src={t.img}
+                  alt={t.title}
+                  className="w-full md:max-w-[70%] h-auto"
+                />
               </div>
             </AnimatedContent>
             <div className="md:relative absolute top-[30%] w-full mb-5 md:w-[50%] flex flex-col gap-6">
