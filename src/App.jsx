@@ -14,6 +14,7 @@ import { Collaborator } from "./section/collaborator.section";
 import { Testimoni } from "./section/testimoni.section";
 import { Contact } from "./section/contact.section";
 import { Helmet } from "react-helmet-async";
+import dipdop from "/dipdop.svg"
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -33,7 +34,7 @@ function App() {
           property="og:description"
           content="More Than a Vendor. Your Ecosystem Partner."
         />
-        <meta property="og:image" content="https://dipdop.net/wp-content/uploads/2024/10/cropped-dipdop_logo-1.jpg" />
+        <meta property="og:image" content={dipdop} />
         <meta property="og:url" content="https://dipdop-three.vercel.app/" />
       </Helmet>
       <div className="max-w-full">
