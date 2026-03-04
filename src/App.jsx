@@ -34,7 +34,7 @@ function App() {
           property="og:description"
           content="More Than a Vendor. Your Ecosystem Partner."
         />
-        <meta property="og:image" content={dipdop} />
+        <meta property="og:image" content="https://dipdop-three.vercel.app/dipdop-2.png" />
         <meta property="og:url" content="https://dipdop-three.vercel.app/" />
       </Helmet>
       <div className="max-w-full">
