@@ -14,12 +14,18 @@ import tjakrawala from "/tjakrawala.png";
 import yp2n from "/yp2n.png";
 import etikalingkungan from "/etikalingkungan.png";
 import qeez from "/qeez.png";
+import writingIdeusaha from "/writingIdeusaha.jpg";
+import writingUmkm from "/writingUmkm.png";
+import writingTips from "/writingTips.jpg";
+import writingStrategi from "/writingStrategi.jpg";
+import writingKesalahan from "/writingKesalahan.jpg";
 import coffeeppt from "/coffeeppt.png";
 import anakdebu from "/anakdebu.jpg";
 import gorengan from "/gorengan.jpg";
 import leimena from "/leimena.jpg";
 import skippy from "/skippy.jpg";
 import workshop from "/workshop.jpg";
+import eventElora from "/eventElora.jpg";
 import mencintaisederhana from "/mencintaisederhana.jpg";
 import { useState } from "react";
 
@@ -391,27 +397,116 @@ export function Portofolio() {
       year: "2024",
       img: coffeeppt,
     },
+    {
+      id: 25,
+      title: "UMKM Cuma Ikut Tren?",
+      color: "#1A05A2",
+      category: "Writing Portfolio",
+      about:"Perkembangan UMKM di Indonesia semakin pesat dari tahun ke tahun. Banyak pelaku usaha kecil berlomba-lomba mengikuti tren yang sedang viral, mulai dari produk makanan kekinian, fashion thrift, minuman estetik, hingga bisnis berbasis digital. Tidak salah memang mengikuti tren, karena tren bisa menjadi pintu masuk untuk mendapatkan pasar dengan cepat. Namun, pertanyaannya: apakah UMKM hanya ingin viral sesaat, atau ingin bertahan dalam jangka panjang? Banyak UMKM gagal berkembang bukan karena produknya buruk, tetapi karena tidak memiliki ciri khas dan identitas brand yang kuat. Ketika tren berganti, bisnis ikut tenggelam. Inilah pentingnya membangun brand yang tahan lama dan tidak sekadar ikut arus.",
+      link: "https://dipdop.net/umkm-cuma-ikut-tren-ini-cara-membangun-ciri-khas-dan-brand-yang-tahan-lama/",
+      year: "2024",
+      img: writingUmkm,
+    },
+    {
+      id: 26,
+      title: "8 Tips Membuat Tagline Produk ",
+      color: "#76D2DB",
+      category: "Writing Portfolio",
+      about: "Pernahkah kamu mendengar kalimat “Jeruk kok minum jeruk?” atau “Apapun makanannya, minumnya…“? Tanpa menyebutkan nama mereknya pun, kamu pasti sudah tahu produk apa yang dimaksud. Itulah kekuatan dari sebuah tagline produk. Di tengah hiruk-pikuk persaingan bisnis saat ini, memiliki produk berkualitas saja tidaklah cukup jika identitasnya tidak melekat di benak konsumen. Banyak pemilik usaha yang terlalu fokus pada desain logo atau kemasan, tetapi melupakan elemen kata-kata yang bisa menjadi “nyawa” bagi brand mereka. ",
+      link: "https://dipdop.net/8-tips-membuat-tagline-produk-yang-menarik-dan-mudah-diingat/",
+      year: "2024",
+      img: writingTips,
+    },
+    {
+      id: 27,
+      title: "7 Strategi Menghadapi Kompetitor",
+      color: "#DA4848",
+      category: "Writing Portfolio",
+      about: "Menjalankan bisnis di tengah persaingan pasar yang ramai sering kali membuat pelaku usaha merasa terjepit, terutama saat menjual barang yang hampir sama dengan pesaing. Lalu, bagaimana cara menghadapi kompetitor yang menawarkan produk serupa tanpa harus mengorbankan keuntungan? Memiliki produk yang bagus saja tidak menjamin pelanggan akan memilih toko kamu jika tidak ada nilai tambah yang ditonjolkan. Cara bersaing dengan kompetitor yang cerdas bukan berarti harus menjatuhkan lawan, melainkan bagaimana cara kamu tampil lebih unggul di mata konsumen.",
+      link: "https://dipdop.net/strategi-menghadapi-kompetitor-dengan-produk-serupa/",
+      year: "2024",
+      img: writingStrategi,
+    },
+    {
+      id: 28,
+      title: "6 Kesalahan yang Bikin Stand Jualanmu Sepi",
+      color: "#36064D",
+      category: "Writing Portfolio",
+      about: "Sebagai UMKM, hal yang mungkin paling ditakutkan kala berjualan adalah mendapati stand jualan yang sepi, baik itu di saat baru beberapa saat atau telah seharian berjualan. Kalau hal tersebut terjadi, yang jadi datang bukannya untung, tetapi malah rugi buntung!",
+      link: "https://dipdop.net/kesalahan-bikin-stand-jualanmu-sepi/",
+      year: "2024",
+      img: writingKesalahan,
+    },
+    {
+      id: 29,
+      title: "13 Ide Usaha Jelang Lebaran ",
+      color: "#8F0177",
+      category: "Writing Portfolio",
+      about: " Momen menjelang Idul Fitri selalu membawa keberkahan, tidak hanya bagi mereka yang merayakan, tetapi juga bagi para pelaku bisnis. Meningkatnya kebutuhan masyarakat untuk mudik, berbagi kebahagiaan, hingga mempercantik rumah membuat berbagai peluang usaha bermunculan. Tidak heran jika banyak orang yang mulai mencari ide usaha jelang Lebaran untuk memanfaatkan lonjakan permintaan yang terjadi setiap tahun. Kalau kamu jeli melihat peluang, momen ini bisa menjadi ladang cuan yang sangat menjanjikan, baik sebagai bisnis utama maupun usaha sampingan. ",
+      link: "https://dipdop.net/13-ide-usaha-jelang-lebaran-paling-laris-dan-menguntungkan/",
+      year: "2024",
+      img: writingIdeusaha,
+    },
+    {
+      id: 30,
+      title: "Soft Launching & Meet Greet: Elora",
+      color: "#DE1A58",
+      category: "Event Portfolio",
+      about: "Akhirnya, perjalanan panjang sang penulis tumpah ruah dalam sebuah karya berjudul Elora. Kami mengundang kamu untuk menjadi bagian dari perjalanan awal buku ini dalam acara Soft Launching & Meet Greet yang eksklusif!",
+      link: "https://dipdop.net/13-ide-usaha-jelang-lebaran-paling-laris-dan-menguntungkan/",
+      year: "2024",
+      img: eventElora,
+    },
   ];
   const filteredPortofolio = testimoni.filter(
     (f) => f.category === activeCategory,
   );
   const categories = [
-    "Landing page",
-    "Social media management",
-    "Design Portfolio",
-    "Workshop",
-    "Video Portfolio",
-    "Book Publishing Portfolio",
-    "Translation Portfolio"
+    {
+      category: "Landing page",
+      seemore: "https://dipdop.net/website-portfolio/",
+    },
+    {
+      category: "Social media management",
+      seemore: "https://dipdop.net/socmed-activation-portfolio/",
+    },
+    {
+      category: "Design Portfolio",
+      seemore: "https://dipdop.net/design-portfolio/",
+    },
+    {
+      category: "Workshop",
+      seemore: "https://dipdop.net/workshop-portfolio/",
+    },
+    {
+      category: "Video Portfolio",
+      seemore: "https://dipdop.net/video-portfolio/",
+    },
+    {
+      category: "Writing Portfolio",
+      seemore: "https://dipdop.net/",
+    },
+    {
+      category: "Book Publishing Portfolio",
+      seemore: "https://dipdop.net/book-published-portfolio/",
+    },
+    {
+      category: "Translation Portfolio",
+      seemore: "https://dipdop.net/translation-portfolio/",
+    },
+    {
+      category: "Event Portfolio",
+      seemore: "https://dipdop.net/event-portfolio/",
+    },
   ];
   return (
     <>
       {/** Portofolio */}
-      <section id="portofolio" className="w-full flex flex-col gap-4">
-        <div className="flex group px-6 flex-col md:flex-row items-center justify-between mb-12 gap-4">
+      <section id="portofolio" className="w-full pt-24 flex flex-col gap-4">
+        <div className="flex group  px-6 flex-col md:flex-row items-center justify-between mb-12 gap-4">
           <div>
             <h2 className="text-[#0C2C55] text-4xl md:text-8xl font-black tracking-tighter uppercase poppins-bold">
-              Portofolio
+              Portfolio
             </h2>
             <div className="h-1.5 bg-[#6BA2B0] w-16 transition-all duration-500 group-hover:w-full"></div>
           </div>
@@ -419,15 +514,15 @@ export function Portofolio() {
         <div className="flex px-6 flex-wrap gap-2  ">
           {categories.map((cat) => (
             <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
+              key={cat.category}
+              onClick={() => setActiveCategory(cat.category)}
               className={`px-6 py-2 rounded-full text-xs md:text-sm font-bold transition-all duration-300 border-2 ${
-                activeCategory === cat
+                activeCategory === cat.category
                   ? "bg-[#0C2C55] text-white border-[#0C2C55] scale-105 shadow-lg"
                   : "bg-transparent text-[#0C2C55] border-[#0C2C55]/20 hover:border-[#0C2C55]"
               }`}
             >
-              {cat}
+              {cat.category}
             </button>
           ))}
         </div>
@@ -456,7 +551,7 @@ export function Portofolio() {
                 <img
                   src={t.img}
                   alt={t.title}
-                  className="w-full md:max-w-[70%] h-auto"
+                  className="w-fulls md:max-w-[70%] h-auto"
                 />
               </div>
             </AnimatedContent>
@@ -504,9 +599,7 @@ export function Portofolio() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-3 bg-white text-black hover:bg-black hover:text-white px-6 py-3 md:px-10 md:py-4 rounded-full font-bold transition-all duration-300 transform hover:-translate-y-1 shadow-lg text-sm md:text-base"
                     >
-                      {t.category === "Landing page"
-                        ? "OPEN PROJECT"
-                        : "VISIT INSTAGRAM"}
+                      SEE MORE
                       <span className="text-xl">→</span>
                     </a>
                   )}
@@ -515,6 +608,19 @@ export function Portofolio() {
             </div>
           </div>
         ))}
+        {activeCategory && (
+          <div className="px-6 flex justify-center  items-center w-full mt-4">
+            <a
+              href={
+                categories.find((c) => c.category === activeCategory)?.seemore
+              }
+              target="_blank"
+              className="px-6 py-2 rounded-full text-xs md:text-sm font-bold transition-all duration-300 border-2 bg-[#0C2C55] text-white border-[#0C2C55] scale-105 shadow-lg"
+            >
+              See More →
+            </a>
+          </div>
+        )}
       </section>
     </>
   );

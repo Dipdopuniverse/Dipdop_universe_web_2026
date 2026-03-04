@@ -143,7 +143,9 @@ html, body {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); } /* Geser setengah karena datanya kita duplikat */
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .animate-custom-marquee {
   display: flex;
   width: max-content;

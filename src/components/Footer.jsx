@@ -49,7 +49,7 @@ export function Footer() {
         {/* Tengah: Copyright */}
         
         <div className="text-gray-500 text-[12px] md:text-sm font-medium order-3 md:order-2 text-center md:text-left">
-           © 2026 PT DIPDOP UNIVERSE CORP
+           © {currentYear} PT DIPDOP UNIVERSE CORP
         </div>
 
         {/* Kanan: Social Media */}
