@@ -27,10 +27,46 @@ import skippy from "/skippy.jpg";
 import workshop from "/workshop.jpg";
 import eventElora from "/eventElora.jpg";
 import mencintaisederhana from "/mencintaisederhana.jpg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export function Portofolio() {
-  const [activeCategory, setActiveCategory] = useState("Landing page");
+  const [activeCategory, setActiveCategory] = useState("Writing Portfolio");
+  const [data, setData] = useState([]);
+  const [error, setError] = useState(null);
+  const getRandomColor = () => {
+    const letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  };
+  const urlDipdop = import.meta.env.VITE_URL;
+
+  useEffect(() => {
+    const takeData = async () => {
+      try {
+        const response = await axios.get(urlDipdop);
+        const formattedData = response.data.map((item) => ({
+          id: item.id,
+          title: item.title.rendered,
+          color: getRandomColor(),
+          category: "Writing Portfolio",
+          about:
+            item.yoast_head_json?.description ||
+            "Baca berita lengkapnya di sini.",
+          link: item.link,
+          year: new Date(item.date).getFullYear().toString(),
+          img: item.yoast_head_json?.og_image?.[0]?.url,
+        }));
+        setData(formattedData);
+      } catch (error) {
+        setError("Gagal mengambil data berita.");
+      }
+    };
+    takeData();
+  }, []);
   const testimoni = [
     {
       id: 1,
@@ -398,70 +434,26 @@ export function Portofolio() {
       img: coffeeppt,
     },
     {
-      id: 25,
-      title: "UMKM Cuma Ikut Tren?",
-      color: "#1A05A2",
-      category: "Writing Portfolio",
-      about:"Perkembangan UMKM di Indonesia semakin pesat dari tahun ke tahun. Banyak pelaku usaha kecil berlomba-lomba mengikuti tren yang sedang viral, mulai dari produk makanan kekinian, fashion thrift, minuman estetik, hingga bisnis berbasis digital. Tidak salah memang mengikuti tren, karena tren bisa menjadi pintu masuk untuk mendapatkan pasar dengan cepat. Namun, pertanyaannya: apakah UMKM hanya ingin viral sesaat, atau ingin bertahan dalam jangka panjang? Banyak UMKM gagal berkembang bukan karena produknya buruk, tetapi karena tidak memiliki ciri khas dan identitas brand yang kuat. Ketika tren berganti, bisnis ikut tenggelam. Inilah pentingnya membangun brand yang tahan lama dan tidak sekadar ikut arus.",
-      link: "https://dipdop.net/umkm-cuma-ikut-tren-ini-cara-membangun-ciri-khas-dan-brand-yang-tahan-lama/",
-      year: "2024",
-      img: writingUmkm,
-    },
-    {
-      id: 26,
-      title: "8 Tips Membuat Tagline Produk ",
-      color: "#76D2DB",
-      category: "Writing Portfolio",
-      about: "Pernahkah kamu mendengar kalimat “Jeruk kok minum jeruk?” atau “Apapun makanannya, minumnya…“? Tanpa menyebutkan nama mereknya pun, kamu pasti sudah tahu produk apa yang dimaksud. Itulah kekuatan dari sebuah tagline produk. Di tengah hiruk-pikuk persaingan bisnis saat ini, memiliki produk berkualitas saja tidaklah cukup jika identitasnya tidak melekat di benak konsumen. Banyak pemilik usaha yang terlalu fokus pada desain logo atau kemasan, tetapi melupakan elemen kata-kata yang bisa menjadi “nyawa” bagi brand mereka. ",
-      link: "https://dipdop.net/8-tips-membuat-tagline-produk-yang-menarik-dan-mudah-diingat/",
-      year: "2024",
-      img: writingTips,
-    },
-    {
-      id: 27,
-      title: "7 Strategi Menghadapi Kompetitor",
-      color: "#DA4848",
-      category: "Writing Portfolio",
-      about: "Menjalankan bisnis di tengah persaingan pasar yang ramai sering kali membuat pelaku usaha merasa terjepit, terutama saat menjual barang yang hampir sama dengan pesaing. Lalu, bagaimana cara menghadapi kompetitor yang menawarkan produk serupa tanpa harus mengorbankan keuntungan? Memiliki produk yang bagus saja tidak menjamin pelanggan akan memilih toko kamu jika tidak ada nilai tambah yang ditonjolkan. Cara bersaing dengan kompetitor yang cerdas bukan berarti harus menjatuhkan lawan, melainkan bagaimana cara kamu tampil lebih unggul di mata konsumen.",
-      link: "https://dipdop.net/strategi-menghadapi-kompetitor-dengan-produk-serupa/",
-      year: "2024",
-      img: writingStrategi,
-    },
-    {
-      id: 28,
-      title: "6 Kesalahan yang Bikin Stand Jualanmu Sepi",
-      color: "#36064D",
-      category: "Writing Portfolio",
-      about: "Sebagai UMKM, hal yang mungkin paling ditakutkan kala berjualan adalah mendapati stand jualan yang sepi, baik itu di saat baru beberapa saat atau telah seharian berjualan. Kalau hal tersebut terjadi, yang jadi datang bukannya untung, tetapi malah rugi buntung!",
-      link: "https://dipdop.net/kesalahan-bikin-stand-jualanmu-sepi/",
-      year: "2024",
-      img: writingKesalahan,
-    },
-    {
-      id: 29,
-      title: "13 Ide Usaha Jelang Lebaran ",
-      color: "#8F0177",
-      category: "Writing Portfolio",
-      about: " Momen menjelang Idul Fitri selalu membawa keberkahan, tidak hanya bagi mereka yang merayakan, tetapi juga bagi para pelaku bisnis. Meningkatnya kebutuhan masyarakat untuk mudik, berbagi kebahagiaan, hingga mempercantik rumah membuat berbagai peluang usaha bermunculan. Tidak heran jika banyak orang yang mulai mencari ide usaha jelang Lebaran untuk memanfaatkan lonjakan permintaan yang terjadi setiap tahun. Kalau kamu jeli melihat peluang, momen ini bisa menjadi ladang cuan yang sangat menjanjikan, baik sebagai bisnis utama maupun usaha sampingan. ",
-      link: "https://dipdop.net/13-ide-usaha-jelang-lebaran-paling-laris-dan-menguntungkan/",
-      year: "2024",
-      img: writingIdeusaha,
-    },
-    {
       id: 30,
       title: "Soft Launching & Meet Greet: Elora",
       color: "#DE1A58",
       category: "Event Portfolio",
-      about: "Akhirnya, perjalanan panjang sang penulis tumpah ruah dalam sebuah karya berjudul Elora. Kami mengundang kamu untuk menjadi bagian dari perjalanan awal buku ini dalam acara Soft Launching & Meet Greet yang eksklusif!",
+      about:
+        "Akhirnya, perjalanan panjang sang penulis tumpah ruah dalam sebuah karya berjudul Elora. Kami mengundang kamu untuk menjadi bagian dari perjalanan awal buku ini dalam acara Soft Launching & Meet Greet yang eksklusif!",
       link: "https://dipdop.net/13-ide-usaha-jelang-lebaran-paling-laris-dan-menguntungkan/",
       year: "2024",
       img: eventElora,
     },
   ];
-  const filteredPortofolio = testimoni.filter(
+  const displayData = [...testimoni, ...data];
+  const filteredPortofolio = displayData.filter(
     (f) => f.category === activeCategory,
   );
   const categories = [
+    {
+      category: "Writing Portfolio",
+      seemore: "https://dipdop.net/",
+    },
     {
       category: "Landing page",
       seemore: "https://dipdop.net/website-portfolio/",
@@ -481,10 +473,6 @@ export function Portofolio() {
     {
       category: "Video Portfolio",
       seemore: "https://dipdop.net/video-portfolio/",
-    },
-    {
-      category: "Writing Portfolio",
-      seemore: "https://dipdop.net/",
     },
     {
       category: "Book Publishing Portfolio",
@@ -551,11 +539,11 @@ export function Portofolio() {
                 <img
                   src={t.img}
                   alt={t.title}
-                  className="w-fulls md:max-w-[70%] h-auto"
+                  className="w-full md:max-w-[60%] h-auto"
                 />
               </div>
             </AnimatedContent>
-            <div className="md:relative absolute top-[30%] w-full mb-5 md:w-[50%] flex flex-col gap-6">
+            <div className="md:relative absolute top-[30%] w-full mb-5 md:w-[70%] flex flex-col gap-6">
               <AnimatedContent
                 distance={100}
                 direction="vertical"
