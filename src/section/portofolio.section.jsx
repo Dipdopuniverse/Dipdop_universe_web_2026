@@ -26,7 +26,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 export function Portofolio() {
-  const [activeCategory, setActiveCategory] = useState("Writing Portfolio");
+  const [activeCategory, setActiveCategory] = useState("Writing");
   const [data, setData] = useState([]);
   const [portofolio, setPortofolio] = ([])
   const [error, setError] = useState(null);
@@ -51,7 +51,7 @@ export function Portofolio() {
           category: "Writing",
           about:
             item.yoast_head_json?.description ||
-            "Baca berita lengkapnya di sini. klik see more",
+            "Baca berita lengkapnya di sini.",
           link: item.link,
           year: new Date(item.date).getFullYear().toString(),
           img: item.yoast_head_json?.og_image?.[0]?.url,
