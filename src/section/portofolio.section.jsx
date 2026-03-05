@@ -14,11 +14,6 @@ import tjakrawala from "/tjakrawala.png";
 import yp2n from "/yp2n.png";
 import etikalingkungan from "/etikalingkungan.png";
 import qeez from "/qeez.png";
-import writingIdeusaha from "/writingIdeusaha.jpg";
-import writingUmkm from "/writingUmkm.png";
-import writingTips from "/writingTips.jpg";
-import writingStrategi from "/writingStrategi.jpg";
-import writingKesalahan from "/writingKesalahan.jpg";
 import coffeeppt from "/coffeeppt.png";
 import anakdebu from "/anakdebu.jpg";
 import gorengan from "/gorengan.jpg";
@@ -33,6 +28,7 @@ import axios from "axios";
 export function Portofolio() {
   const [activeCategory, setActiveCategory] = useState("Writing Portfolio");
   const [data, setData] = useState([]);
+  const [portofolio, setPortofolio] = ([])
   const [error, setError] = useState(null);
   const getRandomColor = () => {
     const letters = "0123456789ABCDEF";
@@ -52,7 +48,7 @@ export function Portofolio() {
           id: item.id,
           title: item.title.rendered,
           color: getRandomColor(),
-          category: "Writing Portfolio",
+          category: "Writing",
           about:
             item.yoast_head_json?.description ||
             "Baca berita lengkapnya di sini.",
@@ -66,13 +62,13 @@ export function Portofolio() {
       }
     };
     takeData();
-  }, []);
+  }, [activeCategory]);
   const testimoni = [
     {
       id: 1,
       title: "Kontruksimu",
       color: "#FAB95B",
-      category: "Landing page",
+      category: "Landing Page",
       about:
         "Jasa konstruksi yang menyediakan jasa pembangunan, renovasi, desain dan produk konstruksi lainnya. Dengan komitmen pada kualitas dan kepuasan pelanggan, kami terus mengembangkan inovasi dan beradaptasi dengan kebutuhan pasar demi memberikan solusi terbaik pada setiap proyek.",
       link: "https://www.kontruksimu.com",
@@ -83,7 +79,7 @@ export function Portofolio() {
       id: 2,
       title: "LSP Agribisnis Ambissi",
       color: "#9BC264",
-      category: "Landing page",
+      category: "Landing Page",
       about:
         "LSP Agribisnis Ambissi adalah lembaga sertifikasi profesi yang terafiliasi di bawah Badan Nasional Sertifikasi Profesi (BNSP). Berdiri sejak 2015 dan mulai beroperasi mulai 2016, LSP Agribisnis Ambissi telah mensertifikasi lebih dari 5000 asesi dan memberikan lebih dari 4000 Sertifikat Kompetensi.",
       link: "https://lspagribisnis.co.id/",
@@ -94,7 +90,7 @@ export function Portofolio() {
       id: 3,
       title: "Tjakrawala Batik & Crafts",
       color: "#FFD41D",
-      category: "Landing page",
+      category: "Landing Page",
       about: `Tjakrawala Batik & Crafts adalah toko online yang menawarkan 
             batik premium dari Madura. Mereka menyajikan koleksi batik tulis dengan desain yang menggabungkan keindahan budaya
              Indonesia dan inovasi kontemporer. Produk mereka mencakup kemeja batik, tas, sepatu, dan pakaian fashion lainnya.
@@ -107,7 +103,7 @@ export function Portofolio() {
       id: 4,
       title: "Castle Laundry",
       color: "#FFD41D",
-      category: "Landing page",
+      category: "Landing Page",
       about: `Castle Laundry adalah layanan laundry profesional di
     Bogor yang menawarkan berbagai jasa, termasuk
     laundry kiloan, laundry satuan, cuci karpet, cuci sofa,
@@ -125,7 +121,7 @@ export function Portofolio() {
       id: 5,
       title: "YP2N",
       color: "#75B06F",
-      category: "Landing page",
+      category: "Landing Page",
       about: `Yayasan Pengembangan dan Pemberdayaan
     Nusantara (YP2N) adalah organisasi yang fokus
     pada komunikasi pembangunan dan pemberdayaan
@@ -144,7 +140,7 @@ export function Portofolio() {
       id: 6,
       title: "Mahkota Dollar",
       color: "#C3110C",
-      category: "Social media management",
+      category: "Social Media Management",
       about: `Mahkota Dollar adalah merek tepung singkong
     premium yang dibuat dari singkong pilihan dan
     dikeringkan di bawah sinar matahari alami. Melalui
@@ -165,7 +161,7 @@ export function Portofolio() {
       id: 7,
       title: "Alung Tortila",
       color: "#FF6500",
-      category: "Social media management",
+      category: "Social Media Management",
       about: `Alung Tortilla menyajikan produk tortilla segar yang
     lezat dan berkualitas tinggi. Instagram Alung Tortilla
     berfokus pada visual menarik dari produk, resep
@@ -184,7 +180,7 @@ export function Portofolio() {
       id: 8,
       title: "Kinayar Craft",
       color: "#F6CE71",
-      category: "Social media management",
+      category: "Social Media Management",
       about: `Kinarya Craft menampilkan kerajinan tangan
     lokal yang terbuat dari bahan-bahan alami dan
     ramah lingkungan. Melalui Instagram, kami
@@ -204,7 +200,7 @@ export function Portofolio() {
       id: 9,
       title: "Beranda Brand",
       color: "#FFD41D",
-      category: "Social media management",
+      category: "Social Media Management",
       about: `Kami mengelola Instagram Beranda Brand
     dengan fokus pada desain grafis dan branding
     kreatif. Konsep visual kami menonjolkan estetika
@@ -230,7 +226,7 @@ export function Portofolio() {
       id: 10,
       title: "Seven Dream Syariah Hotel",
       color: "",
-      category: "Social media management",
+      category: "Social Media Management",
       about: `Kami mengelola Instagram Seven Dreams Syari-
     ah Hotel dengan fokus pada menciptakan
     
@@ -262,7 +258,7 @@ export function Portofolio() {
       id: 11,
       title: "Iswara Food",
       color: "#628141",
-      category: "Social media management",
+      category: "Social Media Management",
       about: `Kami mengelola Instagram Iswara Food dengan fokus
     pada menampilkan keunggulan bumbu sehat bebas
     gluten yang ditawarkan. Akun ini dirancang untuk
@@ -293,7 +289,7 @@ export function Portofolio() {
       id: 12,
       title: "Rajasamas Batik",
       color: "#E6501B",
-      category: "Social media management",
+      category: "Social Media Management",
       about: `Kami mengelola Instagram Rajasamas Batik dengan
     fokus pada memperkenalkan dan merayakan keindahan
     Batik Maos asli dari Cilacap. Akun ini dirancang untuk
@@ -327,7 +323,7 @@ export function Portofolio() {
       id: 13,
       title: "Institut Leimena",
       color: "#0C2C55",
-      category: "Design Portfolio",
+      category: "Design",
       about:
         "Desain roll banner yang dirancang untuk menyajikan profil perusahaan dengan jelas dan profesional. Mencakup informasi kunci tentang visi, misi, program kegiatan, serta informasi kontak untuk memperkenalkan organisasi kepada publik dan mitra potensial dengan layout yang mudah dibaca.",
       link: null,
@@ -338,7 +334,7 @@ export function Portofolio() {
       id: 14,
       title: "Skippy Peanut Butter",
       color: "#004B91",
-      category: "Design Portfolio",
+      category: "Design",
       about:
         "Desain roll banner yang menonjolkan produk utama Skippy dengan tampilan menarik dan menggugah selera. Menampilkan berbagai varian produk (creamy & chunky), keunggulan bahan baku, serta saran penyajian untuk menarik perhatian konsumen.",
       link: null,
@@ -346,21 +342,10 @@ export function Portofolio() {
       img: skippy,
     },
     {
-      id: 15,
-      title: "Gorengan Maknyus",
-      color: "#E31E24",
-      category: "Design Portfolio",
-      about:
-        "Banner yang dirancang untuk menonjolkan kelezatan produk gorengan seperti bakwan, risol, dan pastel. Fokus pada visual yang menggugah selera, informasi cita rasa, tekstur renyah, serta penawaran spesial untuk meningkatkan daya tarik di lokasi ritel.",
-      link: null,
-      year: "2024",
-      img: gorengan,
-    },
-    {
       id: 16,
       title: "Qeez! Magazine",
       color: "#FF007F",
-      category: "Book Publishing Portfolio",
+      category: "Book Publishing",
       about:
         "Desain cover majalah dengan konsep modern dan dinamis. Menggunakan visual yang berani, tipografi kreatif, dan palet warna vibrant untuk mencerminkan energi serta vibrasi kuat agar menonjol di rak buku.",
       link: null,
@@ -371,7 +356,7 @@ export function Portofolio() {
       id: 17,
       title: "Anak Debu",
       color: "#4A4A4A",
-      category: "Book Publishing Portfolio",
+      category: "Book Publishing",
       about:
         "Desain cover yang menonjolkan nuansa puitis dan reflektif. Menggunakan ilustrasi sentral yang evocative, tipografi elegan, dan palet warna sederhana untuk mencerminkan kedalaman narasi buku.",
       link: null,
@@ -382,7 +367,7 @@ export function Portofolio() {
       id: 18,
       title: "Untuk Mencintai Sederhana",
       color: "#BCC6CC",
-      category: "Book Publishing Portfolio",
+      category: "Book Publishing",
       about:
         "Konsep desain yang bersih dan minimalis untuk menonjolkan keindahan dalam kesederhanaan. Menggunakan warna-warna tenang dan layout yang damai sesuai dengan tema buku yang penuh makna.",
       link: null,
@@ -415,7 +400,7 @@ export function Portofolio() {
       id: 23,
       title: "Etika Lingkungan (Dr. Rina Mardiana)",
       color: "#388E3C",
-      category: "Video Portfolio",
+      category: "Video",
       about:
         "Produksi video edukasi yang informatif dan engaging mengenai prinsip etika lingkungan. Mengintegrasikan grafik profesional, footage relevan, dan elemen interaktif seperti kuis untuk memfasilitasi pembelajaran efektif.",
       link: null,
@@ -426,7 +411,7 @@ export function Portofolio() {
       id: 24,
       title: "Coffee Plantation Investment",
       color: "#6D4C41",
-      category: "Translation Portfolio",
+      category: "Translation",
       about:
         "Presentasi profesional untuk proposisi investasi industri kopi. Mencakup desain slide dengan infografis data pasar, proyeksi keuangan, dan layanan penerjemahan untuk audiens internasional.",
       link: null,
@@ -437,10 +422,10 @@ export function Portofolio() {
       id: 30,
       title: "Soft Launching & Meet Greet: Elora",
       color: "#DE1A58",
-      category: "Event Portfolio",
+      category: "Event",
       about:
         "Akhirnya, perjalanan panjang sang penulis tumpah ruah dalam sebuah karya berjudul Elora. Kami mengundang kamu untuk menjadi bagian dari perjalanan awal buku ini dalam acara Soft Launching & Meet Greet yang eksklusif!",
-      link: "https://dipdop.net/13-ide-usaha-jelang-lebaran-paling-laris-dan-menguntungkan/",
+      link: "https://dipdop.net/event-portfolio/",
       year: "2024",
       img: eventElora,
     },
@@ -451,19 +436,19 @@ export function Portofolio() {
   );
   const categories = [
     {
-      category: "Writing Portfolio",
+      category: "Writing",
       seemore: "https://dipdop.net/",
     },
     {
-      category: "Landing page",
+      category: "Landing Page",
       seemore: "https://dipdop.net/website-portfolio/",
     },
     {
-      category: "Social media management",
+      category: "Social Media Management",
       seemore: "https://dipdop.net/socmed-activation-portfolio/",
     },
     {
-      category: "Design Portfolio",
+      category: "Design",
       seemore: "https://dipdop.net/design-portfolio/",
     },
     {
@@ -471,25 +456,25 @@ export function Portofolio() {
       seemore: "https://dipdop.net/workshop-portfolio/",
     },
     {
-      category: "Video Portfolio",
+      category: "Video",
       seemore: "https://dipdop.net/video-portfolio/",
     },
     {
-      category: "Book Publishing Portfolio",
+      category: "Book Publishing",
       seemore: "https://dipdop.net/book-published-portfolio/",
     },
     {
-      category: "Translation Portfolio",
+      category: "Translation",
       seemore: "https://dipdop.net/translation-portfolio/",
     },
     {
-      category: "Event Portfolio",
+      category: "Event",
       seemore: "https://dipdop.net/event-portfolio/",
     },
   ];
   return (
     <>
-      {/** Portofolio */}
+      {/** Portfolio */}
       <section id="portofolio" className="w-full pt-24 flex flex-col gap-4">
         <div className="flex group  px-6 flex-col md:flex-row items-center justify-between mb-12 gap-4">
           <div>
@@ -521,7 +506,7 @@ export function Portofolio() {
               backgroundImage: `radial-gradient(circle at top left, rgba(255,255,255,0.5) 0%, ${t.color || "#1CAF49"} 100%)`,
               backgroundColor: t.color || "#1CAF49",
             }}
-            className="w-full min-h-screen flex flex-col md:flex-row md:justify-around md:items-center md:p-8 sticky top-0"
+            className="w-full min-h-screen flex flex-col md:flex-row md:justify-center gap-9 md:items-center md:p-8 sticky top-0"
           >
             <AnimatedContent
               distance={100}
@@ -530,20 +515,21 @@ export function Portofolio() {
               reverse
               ease="power3.out"
               initialOpacity={0}
+              className="w-auto md:max-w-[50%] z-10"
               animateOpacity
               scale={1}
               threshold={0.1}
               delay={0.5}
             >
-              <div className="w-full z-10">
+              <div className="">
                 <img
                   src={t.img}
                   alt={t.title}
-                  className="w-full md:max-w-[60%] h-auto"
+                  className="w-auto h-auto"
                 />
               </div>
             </AnimatedContent>
-            <div className="md:relative absolute top-[30%] w-full mb-5 md:w-[70%] flex flex-col gap-6">
+            <div className="md:relative absolute top-[30%] w-full mb-5 md:w-[50%] flex flex-col gap-6">
               <AnimatedContent
                 distance={100}
                 direction="vertical"
