@@ -51,7 +51,7 @@ export function Portofolio() {
           category: "Writing",
           about:
             item.yoast_head_json?.description ||
-            "Baca berita lengkapnya di sini.",
+            "Baca berita lengkapnya di sini. klik see more",
           link: item.link,
           year: new Date(item.date).getFullYear().toString(),
           img: item.yoast_head_json?.og_image?.[0]?.url,
