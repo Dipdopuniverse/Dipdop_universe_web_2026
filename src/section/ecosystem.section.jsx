@@ -178,7 +178,7 @@ export function Ecosystem() {
                 href={d.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-8 inline-flex border-2 border-[#6BA2B0] bg-white text-[#358dad] px-4 py-2 rounded-4xl items-center gap-2 font-bold text-sm hover:bg-[#6BA2B0] hover:text-white text-center transition-colors"
+                className="mt-8 inline-flex border border-[#6BA2B0] bg-white text-[#358dad] px-4 py-2 rounded-4xl items-center gap-2 font-bold text-sm hover:bg-[#6BA2B0] hover:text-white text-center transition-colors"
               >
                 LEARN MORE <span className=" text-lg">→</span>
               </a>

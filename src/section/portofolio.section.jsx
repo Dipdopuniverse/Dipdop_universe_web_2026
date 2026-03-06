@@ -28,7 +28,6 @@ import axios from "axios";
 export function Portofolio() {
   const [activeCategory, setActiveCategory] = useState("Writing");
   const [data, setData] = useState([]);
-  const [portofolio, setPortofolio] = ([])
   const [error, setError] = useState(null);
   const getRandomColor = () => {
     const letters = "0123456789ABCDEF";
@@ -525,6 +524,7 @@ export function Portofolio() {
                 <img
                   src={t.img}
                   alt={t.title}
+                  loading="lazy"
                   className="w-auto h-auto"
                 />
               </div>
