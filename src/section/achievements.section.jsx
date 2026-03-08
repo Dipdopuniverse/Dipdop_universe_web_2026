@@ -13,7 +13,7 @@ export function Achievements() {
       {/** Achievements */}
       <section id="achievements" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+          <div className="flex flex-col md:flex-row justify-between items-center mb-16 gap-6">
             <div className="max-w-2xl">
               <h2 className="text-[#0C2C55] poppins-bold text-4xl md:text-7xl font-bold uppercase leading-none mb-4">
                 Pencapaian <br />

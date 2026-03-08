@@ -514,7 +514,7 @@ export function Portofolio() {
               reverse
               ease="power3.out"
               initialOpacity={0}
-              className="w-auto md:max-w-[50%] z-10"
+              className="w-auto md:max-w-[50%]"
               animateOpacity
               scale={1}
               threshold={0.1}
@@ -529,7 +529,7 @@ export function Portofolio() {
                 />
               </div>
             </AnimatedContent>
-            <div className="md:relative absolute top-[30%] w-full mb-5 md:w-[50%] flex flex-col gap-6">
+            <div className="md:relative absolute top-[50%] md:top-[30%] w-full mb-5 md:w-[50%] flex flex-col gap-6">
               <AnimatedContent
                 distance={100}
                 direction="vertical"

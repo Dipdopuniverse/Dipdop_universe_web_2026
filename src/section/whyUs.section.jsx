@@ -56,7 +56,7 @@ export function WhyUs() {
           </h2>
         </div>
 
-        <div className="w-[80%] font-sans flex flex-col md:flex-row items-stretch px-6 gap-0">
+        <div className="w-[90%] md:w-[80%] font-sans flex flex-col md:flex-row items-stretch px-2 md:px-6 gap-0">
           <div className="flex-1 bg-white/10 backdrop-blur-sm p-8 md:p-12 rounded-t-[40px] md:rounded-tr-none md:rounded-l-[40px] border border-white/10">
             <div className="flex flex-col gap-8">
               {collaborationData.reasons.map((item, index) => (
@@ -97,7 +97,7 @@ export function WhyUs() {
             </div>
           </div>
         </div>
-        <div className="w-[80%] px-6 gap- flex-1  mt-5  ">
+        <div className="w-[90%] md:w-[80%] px-2 md:px-6 gap- flex-1  mt-5  ">
           <div className="flex flex-col gap-8">
             {collaborationData.plus.map((item, index) => (
               <div
