@@ -60,11 +60,14 @@ export function Collaborator() {
     <>
       {/** Collaborator */}
       <section id="collaborator" className="py-24 bg-white">
-        <div className="w-full  mx-auto px-6">
-          <div className="mb-12 w-auto group text-center md:text-left">
-            <h2 className="text-[#0C2C55] text-5xl md:text-8xl font-black uppercase poppins-bold mb-4">
-              Our <span className="text-[#0C2C55]">Network</span>
-            </h2>
+        <div className="w-full group mx-auto px-6">
+          <div className="mb-12 w-auto group gap-2 text-center md:text-left">
+            <div className="max-w-3xl">
+              <h2 className="text-[#0C2C55] poppins-bold text-4xl md:text-7xl font-bold uppercase leading-none mb-4">
+                OUR NETWORK
+              </h2>
+              <div className="h-1.5 bg-[#6BA2B0] w-16 transition-all duration-500 group-hover:w-full"></div>
+            </div>
             <p className="text-slate-500 font-medium">
               Klik kategori untuk melihat partner strategis kami
             </p>

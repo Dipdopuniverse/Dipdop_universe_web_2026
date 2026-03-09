@@ -6,7 +6,6 @@ import bankindonesia from "/Bank _indonesia.png";
 import grab from "/Grab.png";
 import Kemenin from "/kemenin.png";
 import start4 from "/startup4.png";
-import prakerja from "/prakerja.png";
 import ShinyText from "@/components/ShinyText";
 
 export function Achievements() {
