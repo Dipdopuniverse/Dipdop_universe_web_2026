@@ -67,7 +67,7 @@ export function Portofolio() {
       id: 1,
       title: "Kontruksimu",
       color: "#FAB95B",
-      category: "Landing Page",
+      category: "Landing Page/Website",
       about:
         "Jasa konstruksi yang menyediakan jasa pembangunan, renovasi, desain dan produk konstruksi lainnya. Dengan komitmen pada kualitas dan kepuasan pelanggan, kami terus mengembangkan inovasi dan beradaptasi dengan kebutuhan pasar demi memberikan solusi terbaik pada setiap proyek.",
       link: "https://www.kontruksimu.com",
@@ -78,7 +78,7 @@ export function Portofolio() {
       id: 2,
       title: "LSP Agribisnis Ambissi",
       color: "#9BC264",
-      category: "Landing Page",
+      category: "Landing Page/Website",
       about:
         "LSP Agribisnis Ambissi adalah lembaga sertifikasi profesi yang terafiliasi di bawah Badan Nasional Sertifikasi Profesi (BNSP). Berdiri sejak 2015 dan mulai beroperasi mulai 2016, LSP Agribisnis Ambissi telah mensertifikasi lebih dari 5000 asesi dan memberikan lebih dari 4000 Sertifikat Kompetensi.",
       link: "https://lspagribisnis.co.id/",
@@ -89,7 +89,7 @@ export function Portofolio() {
       id: 3,
       title: "Tjakrawala Batik & Crafts",
       color: "#FFD41D",
-      category: "Landing Page",
+      category: "Landing Page/Website",
       about: `Tjakrawala Batik & Crafts adalah toko online yang menawarkan 
             batik premium dari Madura. Mereka menyajikan koleksi batik tulis dengan desain yang menggabungkan keindahan budaya
              Indonesia dan inovasi kontemporer. Produk mereka mencakup kemeja batik, tas, sepatu, dan pakaian fashion lainnya.
@@ -102,7 +102,7 @@ export function Portofolio() {
       id: 4,
       title: "Castle Laundry",
       color: "#FFD41D",
-      category: "Landing Page",
+      category: "Landing Page/Website",
       about: `Castle Laundry adalah layanan laundry profesional di
     Bogor yang menawarkan berbagai jasa, termasuk
     laundry kiloan, laundry satuan, cuci karpet, cuci sofa,
@@ -120,7 +120,7 @@ export function Portofolio() {
       id: 5,
       title: "YP2N",
       color: "#75B06F",
-      category: "Landing Page",
+      category: "Landing Page/Website",
       about: `Yayasan Pengembangan dan Pemberdayaan
     Nusantara (YP2N) adalah organisasi yang fokus
     pada komunikasi pembangunan dan pemberdayaan
@@ -341,28 +341,6 @@ export function Portofolio() {
       img: skippy,
     },
     {
-      id: 16,
-      title: "Qeez! Magazine",
-      color: "#FF007F",
-      category: "Book Publishing",
-      about:
-        "Desain cover majalah dengan konsep modern dan dinamis. Menggunakan visual yang berani, tipografi kreatif, dan palet warna vibrant untuk mencerminkan energi serta vibrasi kuat agar menonjol di rak buku.",
-      link: null,
-      year: "2024",
-      img: qeez,
-    },
-    {
-      id: 17,
-      title: "Anak Debu",
-      color: "#4A4A4A",
-      category: "Book Publishing",
-      about:
-        "Desain cover yang menonjolkan nuansa puitis dan reflektif. Menggunakan ilustrasi sentral yang evocative, tipografi elegan, dan palet warna sederhana untuk mencerminkan kedalaman narasi buku.",
-      link: null,
-      year: "2024",
-      img: anakdebu,
-    },
-    {
       id: 18,
       title: "Untuk Mencintai Sederhana",
       color: "#BCC6CC",
@@ -372,6 +350,28 @@ export function Portofolio() {
       link: null,
       year: "2024",
       img: mencintaisederhana,
+    },
+    {
+      id: 17,
+      title: "Anak Debu",
+      color: "#4A4A4A",
+      category: "Book Publishing",
+      about:
+      "Desain cover yang menonjolkan nuansa puitis dan reflektif. Menggunakan ilustrasi sentral yang evocative, tipografi elegan, dan palet warna sederhana untuk mencerminkan kedalaman narasi buku.",
+      link: null,
+      year: "2024",
+      img: anakdebu,
+    },
+    {
+      id: 16,
+      title: "Qeez! Magazine",
+      color: "#FF007F",
+      category: "Book Publishing",
+      about:
+        "Desain cover majalah dengan konsep modern dan dinamis. Menggunakan visual yang berani, tipografi kreatif, dan palet warna vibrant untuk mencerminkan energi serta vibrasi kuat agar menonjol di rak buku.",
+      link: null,
+      year: "2024",
+      img: qeez,
     },
     {
       id: 19,
@@ -439,7 +439,7 @@ export function Portofolio() {
       seemore: "https://dipdop.net/",
     },
     {
-      category: "Landing Page",
+      category: "Landing Page/Website",
       seemore: "https://dipdop.net/website-portfolio/",
     },
     {

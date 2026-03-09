@@ -6,20 +6,22 @@ import bankindonesia from "/Bank _indonesia.png";
 import grab from "/Grab.png";
 import Kemenin from "/kemenin.png";
 import start4 from "/startup4.png";
+import prakerja from "/prakerja.png";
+import ShinyText from "@/components/ShinyText";
 
 export function Achievements() {
   return (
     <>
       {/** Achievements */}
       <section id="achievements" className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className=" group w-full mx-auto px-8">
           <div className="flex flex-col md:flex-row justify-between items-center mb-16 gap-6">
-            <div className="max-w-2xl">
+            <div className="max-w-3xl">
               <h2 className="text-[#0C2C55] poppins-bold text-4xl md:text-7xl font-bold uppercase leading-none mb-4">
                 Pencapaian <br />
                 <span className="text-[#2D6A76] italic">DIPDOP</span>
               </h2>
-              <div className="h-1.5 w-32 bg-[#2D6A76] rounded-full"></div>
+              <div className="h-1.5 bg-[#6BA2B0] w-16 transition-all duration-500 group-hover:w-full"></div>
             </div>
             <p className="text-slate-600 roboto-a font-medium max-w-sm text-right hidden md:block">
               Dedikasi kami dalam membangun ekosistem digital dan pemberdayaan
@@ -61,6 +63,26 @@ export function Achievements() {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="group w-full flex flex-col justify-center items-center gap-7 mb-8 relative p-1 rounded-[40px]  transition-all duration-500">
+            <div className="w-full  border-2 justify-center items-center flex border-[#6BA2B0]  py-6 px-4 rounded-3xl text-[#6BA2B0] p-5 relative">
+              <ShinyText
+                text={
+                  "Telah menggelar 10+ seminar nasional dan berpatisipasi dalam program Prakerja"
+                }
+                speed={3}
+                className="font-extrabold uppercase text-4xl roboto-a "
+                delay={0}
+                color="#6BA2B0"
+                shineColor="#ffffff"
+                spread={120}
+                direction="left"
+                yoyo={false}
+                pauseOnHover={false}
+                disabled={false}
+              />
+            </div>
+            <div className="bg-white w-full border-[#6BA2B0] border-y-4 p-8 flex flex-col items-center text-center h-full"></div>
           </div>
           <div className="relative bg-white border-2 border-[#6BA2B0] rounded-[40px] p-10 flex flex-col md:flex-row items-center justify-center gap-8 overflow-hidden group">
             <div className="absolute -top-10 -right-5 md:-right-10 md:-bottom-10 text-[10rem] md:text-[12rem] font-black text-slate-100 italic select-none group-hover:text-[#0C2C55] transition-colors">
