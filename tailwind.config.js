@@ -1,9 +1,10 @@
-// tailwind.config.js
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   theme: {
     extend: {
       animation: {
-        'marquee': 'marquee 25s linear infinite',
+        // Durasi 40 detik agar tidak terlalu cepat karena gambar sekarang besar
+        marquee: 'marquee 40s linear infinite',
       },
       keyframes: {
         marquee: {
@@ -13,4 +14,5 @@ module.exports = {
       },
     },
   },
-};
+  plugins: [],
+}

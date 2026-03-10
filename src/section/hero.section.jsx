@@ -38,7 +38,7 @@ export function Hero() {
 
           <div className="flex flex-wrap gap-4 mt-2">
             <a
-              href="https://dipdop.net"
+              href="#ecosystem"
               className="px-8 py-3 bg-[#6BA2B0] hover:bg-[#0C2C55] text-white rounded-full font-bold transition-all shadow-lg hover:shadow-none"
             >
               Explore Ecosystem →

@@ -1,7 +1,7 @@
-import brand from "/brand.png"
-import commuity from "/community-i.png"
-import government from "/government-i.png"
-import umkm from "/umkm-i.png"
+import brand from "/brand.png";
+import commuity from "/community-i.png";
+import government from "/government-i.png";
+import umkm from "/umkm-i.png";
 
 export function WhyUs() {
   const collaborationData = {
@@ -115,7 +115,11 @@ export function WhyUs() {
                     className="text-xl underline underline-offset-2 md:text-2xl flex justify-between items-center font-bold tracking-tight leading-tight text-white
                              group-hover:text-white group-hover:-translate-y-2 transition-all duration-500 text-end group-hover:hidden"
                   >
-                    <img src={item.logo} alt={item.title} className="max-h-[80px] aspect-square p-2" />
+                    <img
+                      src={item.logo}
+                      alt={item.title}
+                      className="max-h-[80px] aspect-square p-2"
+                    />
                     {item.title}
                   </h3>
                   <p

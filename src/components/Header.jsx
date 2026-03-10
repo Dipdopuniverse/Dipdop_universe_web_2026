@@ -15,6 +15,7 @@ export function Header() {
     const navLinks = [
         { name: 'About', href: '#overview' },
         { name: 'Ecosystem', href: '#ecosystem' },
+        { name: 'Programs', href: '#programs' },
         { name: 'Why Us', href: '#why-us' },
         { name: 'Partners', href: '#partners' },
         { name: 'Portfolio', href: '#portofolio' },
