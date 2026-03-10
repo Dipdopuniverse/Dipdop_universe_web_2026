@@ -4,15 +4,12 @@ import SpotlightCard from "@/components/SpotlightCard";
 export function Programs() {
   return (
     <section id="programs" className="w-full group h-auto py-24">
-      <div className="flex w-full flex-col md:flex-row justify-between items-center mb-16 gap-6">
+      <div className="flex px-8 w-full flex-col md:flex-row justify-between items-center mb-16 gap-6">
         <div className="max-w-3xl">
           <h2 className="text-[#0C2C55] poppins-bold text-4xl md:text-7xl font-bold uppercase leading-none mb-4">
             OUR PROGRAMS <br />
             <div className="h-1.5 bg-[#6BA2B0] w-16 transition-all duration-500 group-hover:w-full"></div>
           </h2>
-          <span className="text-xl font-bold text-[#0C2C55]">
-            Berfokus pada :
-          </span>
         </div>
         <p className="text-slate-600 roboto-a font-medium max-w-sm text-right hidden md:block">
           DIPDOP National Initiative
@@ -58,7 +55,7 @@ export function Programs() {
         </div>
       </div>
       <div className="w-full h-auto md:p-8 bg-white flex md:flex-row relative flex-col gap-[20px] justify-center items-center ">
-        <div className="w-full h-[1550px] relative md:w-[50%] flex-col bg-[#6BA2B0] p-5 md:p-10 md:h-[1400px] 2xl:h-[1200px] gap-8 flex rounded-2xl shadow-2xs ">
+        <div className="w-full h-[1550px] relative md:w-[50%] flex-col bg-[#6BA2B0] p-5 md:p-10 md:h-[1400px] 2xl:h-[1200px] gap-8 flex rounded-2xl  ">
           <div className="h-fit w-fit max-h-[500px] shadow-2xl rounded-2xl ">
             <img src="/campus.jpeg" className="h-full rounded-2xl" alt="" />
           </div>
@@ -123,7 +120,7 @@ export function Programs() {
             </div>
           </div>
         </div>
-        <div className="w-full h-[1550px]  relative md:w-[50%] flex-col bg-[#0C2C55] p-5 md:p-10 items-end md:h-[1400px] 2xl:h-[1200px] gap-8 flex rounded-2xl shadow-2xs ">
+        <div className="w-full h-[1550px]  relative md:w-[50%] flex-col bg-[#0C2C55] p-5 md:p-10 items-end md:h-[1400px] 2xl:h-[1200px] gap-8 flex rounded-2xl  ">
           <div className="h-fit w-fit max-h-[500px] shadow-2xl rounded-2xl ">
             <img src="/sma.jpeg" className="h-full rounded-2xl" alt="" />
           </div>
@@ -169,69 +166,69 @@ export function Programs() {
         </div>
       </div>
       <div className="w-full mt-24 md:p-1 relative group">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#6BA2B0] to-[#0C2C55] rounded-[32px] blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-700"></div>
+        <div className="absolute inset-0 bg-gradient-to-r rounded-[32px] blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-700"></div>
 
-        <div className="relative bg-[#0C2C55] p-8 md:p-20 rounded-[32px] border border-white/10 flex flex-col items-center text-center overflow-hidden">
+        <div className="relative bg-transparent p-8 md:p-20 rounded-[32px] border border-white/10 flex flex-col items-center text-center overflow-hidden">
           {/* Decorative Elements */}
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
           <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#6BA2B0]/50 to-transparent"></div>
 
           <div className="max-w-4xl">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mb-8">
-              <span className="w-2 h-2 rounded-full bg-[#6BA2B0] animate-pulse"></span>
-              <span className="text-white/70 text-xs tracking-[0.2em] uppercase font-bold">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#6BA2B0] border border-[#0C2C55] mb-8">
+              <span className="w-2 h-2 rounded-full bg-[#0C2C55] animate-pulse"></span>
+              <span className="text-white text-xs tracking-[0.2em] uppercase font-bold">
                 CSR 
               </span>
             </div>
 
-            <h2 className="text-white poppins-bold text-4xl md:text-6xl font-bold uppercase tracking-tight mb-8">
+            <h2 className="text-black poppins-bold text-4xl md:text-6xl font-bold uppercase tracking-tight mb-8">
               Corporate{" "}
               <span className="text-[#6BA2B0]">Social Initiative</span>
             </h2>
 
-            <p className="text-[#ffff] text-xl md:text-2xl font-light mb-12 max-w-2xl mx-auto">
+            <p className="text-[#0C2C55] text-xl md:text-2xl font-light mb-12 max-w-2xl mx-auto">
               Mendorong Akselerasi Generasi Muda dalam Ekosistem Ekonomi Digital
             </p>
-            <p className="text-[#ffff] text-xl md:text-2xl font-light mb-12 max-w-2xl mx-auto">
+            <p className="text-[#0C2C55] text-xl md:text-2xl font-light mb-12 max-w-2xl mx-auto">
               DIPDOP membuka peluang kolaborasi bagi perusahaan yang ingin
               berkontribusi melalui program Corporate Social Responsibility
               (CSR) dalam bidang pendidikan, literasi digital, dan
               kewirausahaan.
             </p>
-            <p className="text-[#ffff] text-xl md:text-2xl font-light mb-12 max-w-2xl mx-auto">
+            <p className="text-[#0C2C55] text-xl md:text-2xl font-light mb-12 max-w-2xl mx-auto">
               Melalui program ini, perusahaan dapat berperan aktif dalam
               mendukung pelaksanaan dua inisiatif utama DIPDOP:
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 text-left mb-12">
-              <div className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-[#ffff]/50 transition-colors">
+              <div className="p-6 rounded-2xl bg-[#0C2C55] border border-[#0C2C55] hover:shadow-2xl transition-colors">
                 <h3 className="text-white font-bold mb-3">Mahasiswa Digital</h3>
-                <p className="text-white/50 text-sm leading-relaxed">
+                <p className="text-white/70 text-sm leading-relaxed">
                   Program inkubasi kewirausahaan untuk mencetak talenta kreatif
                   di lingkungan kampus.
                 </p>
               </div>
-              <div className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-[#ffff]/50 transition-colors">
+              <div className="p-6 rounded-2xl bg-[#0C2C55] border border-[#0C2C55] hover:shadow-2xl transition-colors">
                 <h3 className="text-white font-bold mb-3">Literasi Sekolah</h3>
-                <p className="text-white/50 text-sm leading-relaxed">
+                <p className="text-white/70 text-sm leading-relaxed">
                   Edukasi bisnis digital interaktif untuk menumbuhkan mental
                   inovator sejak dini.
                 </p>
               </div>
             </div>
 
-            <p className="text-white/60 text-base md:text-lg mb-12 max-w-2xl mx-auto">
+            <p className="text-black text-base md:text-lg mb-12 max-w-2xl mx-auto">
               Kolaborasi ini adalah jembatan bagi perusahaan Anda untuk
               meninggalkan dampak sosial yang nyata dan berkelanjutan bagi masa
               depan ekonomi digital bangsa.
             </p>
-            <p className="text-white/60 text-base md:text-lg mb-12 max-w-2xl mx-auto">
+            <p className="text-black text-base md:text-lg mb-12 max-w-2xl mx-auto">
               KKolaborasi ini tidak hanya memberikan dampak sosial yang nyata,
               tetapi juga menjadi bagian dari kontribusi perusahaan dalam
               mempersiapkan generasi muda yang adaptif terhadap ekonomi digital.
             </p>
-            <p className="text-white/60 text-base md:text-lg mb-12 max-w-2xl mx-auto">
+            <p className="text-black text-base md:text-lg mb-12 max-w-2xl mx-auto">
               Perusahaan yang tertarik untuk mendukung atau berkolaborasi dalam
               program ini dapat menghubungi tim DIPDOP untuk informasi lebih
               lanjut mengenai skema kerja sama dan implementasi program.
