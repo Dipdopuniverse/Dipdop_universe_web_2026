@@ -98,8 +98,8 @@ export function WhyUs() {
             </div>
           </div>
         </div>
-        <div className="w-[90%] md:w-[80%] px-2 md:px-6 gap- flex-1  mt-5  ">
-          <div className="md:lex hidden md:block flex-col gap-8">
+        <div className="w-[90%] md:w-[80%] px-2 md:px-6 gap-4 flex-1  mt-5  ">
+          <div className="md:flex hidden  flex-col gap-8">
             {collaborationData.plus.map((item, index) => (
               <div
                 key={index}
@@ -135,7 +135,7 @@ export function WhyUs() {
               </div>
             ))}
           </div>
-          <div className="flex-col flex gap-8">
+          <div className="flex-col flex md:hidden gap-8">
             {collaborationData.plus.map((item, index) => (
               <SpotlightCard
                 key={index}
