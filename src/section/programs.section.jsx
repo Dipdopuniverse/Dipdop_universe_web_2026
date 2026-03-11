@@ -7,7 +7,7 @@ export function Programs() {
       <div className="flex px-8 w-full flex-col md:flex-row justify-between items-center mb-16 gap-6">
         <div className="max-w-3xl">
           <h2 className="text-[#0C2C55] poppins-bold text-4xl md:text-7xl font-bold uppercase leading-none mb-4">
-            OUR PROGRAMS <br />
+            OUR PROGRAM <br />
             <div className="h-1.5 bg-[#6BA2B0] w-16 transition-all duration-500 group-hover:w-full"></div>
           </h2>
         </div>
@@ -61,8 +61,11 @@ export function Programs() {
           </div>
           <article className=" text-lg text-white">
             <p className="text-4xl font-bold uppercase poppins-bold">
-              Program untuk Kampus Mencetak 100.000 Pengusaha Digital dari
-              Lingkungan Kampus
+              Program untuk Kampus
+            </p>
+            <br />
+            <p className="text-4xl font-bold uppercase poppins-bold">
+              Mencetak 100.000 Pengusaha Digital dari Lingkungan Kampus
             </p>
             <br />
             <p className="text-base">
@@ -94,7 +97,7 @@ export function Programs() {
             }
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 w-fit inline-flex border border-white bg-[#6BA2B0] text-white px-4 py-2 rounded-4xl items-center gap-2 font-bold text-sm hover:bg-white hover:text-[#6BA2B0] absolute bottom-[6%] text-center transition-colors"
+            className="mt-8 w-fit inline-flex border border-white bg-[#6BA2B0] text-white px-4 py-2 rounded-4xl items-center gap-2 font-bold text-sm hover:bg-white hover:text-[#6BA2B0] absolute bottom-[8%] text-center transition-colors"
           >
             Download Proposal Program <span className=" text-lg">→</span>
           </a>
@@ -120,14 +123,18 @@ export function Programs() {
             </div>
           </div>
         </div>
-        <div className="w-full h-[1550px]  relative md:w-[50%] flex-col bg-[#0C2C55] p-5 md:p-10 items-end md:h-[1400px] 2xl:h-[1200px] gap-8 flex rounded-2xl  ">
+        <div className="w-full h-[1550px]  relative md:w-[50%] flex-col bg-[#0C2C55] p-5 md:p-10 items-end md:h-[1400px] 2xl:h-[1200px] gap-4 flex rounded-2xl  ">
           <div className="h-fit w-fit max-h-[500px] shadow-2xl rounded-2xl ">
             <img src="/sma.jpeg" className="h-full rounded-2xl" alt="" />
           </div>
           <article className=" text-end text-lg text-white">
             <p className="text-4xl font-bold uppercase poppins-bold">
-              Program untuk Sekolah Bekal Sukses Sejak Sekolah: Belajar Bisnis
-              Digital dengan Cara Menyenangkan
+              Program untuk Sekolah
+            </p>
+            <br />
+            <p className="text-4xl font-bold uppercase poppins-bold">
+              Bekal Sukses Sejak Sekolah: Belajar Bisnis Digital dengan Cara
+              Menyenangkan
             </p>
             <br />
             <p className="text-base">
@@ -159,7 +166,7 @@ export function Programs() {
             }
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 w-fit inline-flex border border-white bg-[#0C2C55] text-white px-4 py-2 rounded-4xl items-center gap-2 font-bold text-sm hover:bg-white hover:text-[#0C2C55] absolute bottom-[6%] text-center transition-colors"
+            className="mt-8 w-fit inline-flex border border-white bg-[#0C2C55] text-white px-4 py-2 rounded-4xl items-center gap-2 font-bold text-sm hover:bg-white hover:text-[#0C2C55] absolute bottom-[8%] text-center transition-colors"
           >
             Download Proposal Program <span className=" text-lg">→</span>
           </a>
@@ -173,30 +180,27 @@ export function Programs() {
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
           <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#6BA2B0]/50 to-transparent"></div>
 
-          <div className="max-w-4xl">
+          <div className="max-w-4xl flex items-center justify-center flex-col gap-4">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#6BA2B0] border border-[#0C2C55] mb-8">
+            <div className="inline-flex w-fit items-center gap-2 px-4 py-1.5 rounded-full bg-[#6BA2B0] border border-[#0C2C55] mb-8">
               <span className="w-2 h-2 rounded-full bg-[#0C2C55] animate-pulse"></span>
               <span className="text-white text-xs tracking-[0.2em] uppercase font-bold">
-                CSR 
+                CSR
               </span>
             </div>
 
-            <h2 className="text-black poppins-bold text-4xl md:text-6xl font-bold uppercase tracking-tight mb-8">
+            <h2 className="text-black poppins-bold text-4xl md:text-6xl font-bold uppercase tracking-tight mb-2">
               Corporate{" "}
               <span className="text-[#6BA2B0]">Social Initiative</span>
             </h2>
 
-            <p className="text-[#0C2C55] text-xl md:text-2xl font-light mb-12 max-w-2xl mx-auto">
+            <p className="text-[#0C2C55] text-xl md:text-2xl font-light max-w-2xl mx-auto">
               Mendorong Akselerasi Generasi Muda dalam Ekosistem Ekonomi Digital
             </p>
-            <p className="text-[#0C2C55] text-xl md:text-2xl font-light mb-12 max-w-2xl mx-auto">
+            <p className="text-[#0C2C55] text-xl md:text-2xl font-light max-w-2xl mx-auto">
               DIPDOP membuka peluang kolaborasi bagi perusahaan yang ingin
               berkontribusi melalui program Corporate Social Responsibility
               (CSR) dalam bidang pendidikan, literasi digital, dan
-              kewirausahaan.
-            </p>
-            <p className="text-[#0C2C55] text-xl md:text-2xl font-light mb-12 max-w-2xl mx-auto">
               Melalui program ini, perusahaan dapat berperan aktif dalam
               mendukung pelaksanaan dua inisiatif utama DIPDOP:
             </p>
@@ -218,17 +222,15 @@ export function Programs() {
               </div>
             </div>
 
-            <p className="text-black text-base md:text-lg mb-12 max-w-2xl mx-auto">
+            <p className="text-black text-base md:text-lg  max-w-2xl mx-auto">
               Kolaborasi ini adalah jembatan bagi perusahaan Anda untuk
               meninggalkan dampak sosial yang nyata dan berkelanjutan bagi masa
-              depan ekonomi digital bangsa.
+              depan ekonomi digital bangsa. Kolaborasi ini tidak hanya
+              memberikan dampak sosial yang nyata, tetapi juga menjadi bagian
+              dari kontribusi perusahaan dalam mempersiapkan generasi muda yang
+              adaptif terhadap ekonomi digital.
             </p>
-            <p className="text-black text-base md:text-lg mb-12 max-w-2xl mx-auto">
-              KKolaborasi ini tidak hanya memberikan dampak sosial yang nyata,
-              tetapi juga menjadi bagian dari kontribusi perusahaan dalam
-              mempersiapkan generasi muda yang adaptif terhadap ekonomi digital.
-            </p>
-            <p className="text-black text-base md:text-lg mb-12 max-w-2xl mx-auto">
+            <p className="text-black text-base md:text-lg  max-w-2xl mx-auto">
               Perusahaan yang tertarik untuk mendukung atau berkolaborasi dalam
               program ini dapat menghubungi tim DIPDOP untuk informasi lebih
               lanjut mengenai skema kerja sama dan implementasi program.

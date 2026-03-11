@@ -112,7 +112,7 @@ function App() {
           <Ecosystem />
           {/** Programs*/}
           <Programs />
-          <section className="bg-white py-20 px-4 md:px-10">
+          <section className="bg-white py-1 px-4 md:px-10">
             <h2 className="text-4xl md:text-7xl poppins-bold text-[#0C2C55] mb-12 font-bold uppercase leading-tight">
               More Than a Vendor. <br />
               Your{" "}

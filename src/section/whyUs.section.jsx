@@ -1,3 +1,4 @@
+import SpotlightCard from "@/components/SpotlightCard";
 import brand from "/brand.png";
 import commuity from "/community-i.png";
 import government from "/government-i.png";
@@ -98,7 +99,7 @@ export function WhyUs() {
           </div>
         </div>
         <div className="w-[90%] md:w-[80%] px-2 md:px-6 gap- flex-1  mt-5  ">
-          <div className="flex flex-col gap-8">
+          <div className="md:lex hidden md:block flex-col gap-8">
             {collaborationData.plus.map((item, index) => (
               <div
                 key={index}
@@ -132,6 +133,32 @@ export function WhyUs() {
                   </p>
                 </div>
               </div>
+            ))}
+          </div>
+          <div className="flex-col flex gap-8">
+            {collaborationData.plus.map((item, index) => (
+              <SpotlightCard
+                key={index}
+                className="w-full rounded-2xl border gap-4 shadow-2xl  hover:shadow-white group hover:border-white border-gray-600 flex flex-col p-4 items-center"
+                spotlightColor="rgba(255, 255, 255, 0.3)"
+              >
+                <div className="w-full items-center flex gap-4">
+                  <div className="w-fit h-auto p-1 rounded-full bg-white">
+                    <img
+                      src={item.logo}
+                      alt={item.title}
+                      className="max-h-[40px] aspect-square p-2"
+                    />
+                  </div>
+                  <h3 className="text-base font-bold text-white">
+                    {item.title}
+                  </h3>
+                </div>
+                <div className="w-full h-[1px] shadow-2xl group-hover:bg-white bg-gray-600 "></div>
+                <p className="w-full text-sm font-semibold text-white roboto-a">
+                  {item.description}
+                </p>
+              </SpotlightCard>
             ))}
           </div>
         </div>

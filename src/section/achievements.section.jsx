@@ -194,7 +194,7 @@ export function Achievements() {
                   "Telah menggelar 10+ seminar nasional dan berpartisipasi dalam program Prakerja"
                 }
                 speed={3}
-                className="font-extrabold uppercase text-xl md:text-4xl roboto-a "
+                className="font-extrabold uppercase text-center 2xl:text-4xl md:text-xl roboto-a "
                 delay={0}
                 color="#ffffff"
                 shineColor="#6BA2B0"
