@@ -14,8 +14,8 @@ import { Collaborator } from "./section/collaborator.section";
 import { Testimoni } from "./section/testimoni.section";
 import { Contact } from "./section/contact.section";
 import { Helmet } from "react-helmet-async";
+import dipdop from "/dipdop.svg"
 import { Programs } from "./section/programs.section";
-import {LanguageSwitcher} from "./components/LanguageSwitcher";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -101,7 +101,6 @@ function App() {
             >
               <FaRegMessage color="white" />
             </button>
-            <LanguageSwitcher />
           </div>
           {/** Hero {Team} */}
           <Hero />
@@ -113,7 +112,7 @@ function App() {
           <Ecosystem />
           {/** Programs*/}
           <Programs />
-          <section className="bg-white pt-2 pb-10 px-4 md:px-10">
+          <section className="bg-white pt-2 pb-8 px-4 md:px-10">
             <h2 className="text-4xl md:text-7xl poppins-bold text-[#0C2C55] mb-12 font-bold uppercase leading-tight">
               More Than a Vendor. <br />
               Your{" "}
