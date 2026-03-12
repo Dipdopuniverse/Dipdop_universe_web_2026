@@ -206,10 +206,8 @@ export function Achievements() {
               />
               <div className="h-[1px] hover:bg-white bg-white/20 mt-4 w-full"></div>
             </div>
-            {/* Efek Fade Out Kanan-Kiri yang Tipis (Hanya di Pinggir) */}
             <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-r from-[#0C2C55] from-0% via-transparent via-10% to-transparent to-90% after:absolute after:inset-0 after:bg-gradient-to-l after:from-[#0C2C55] after:from-0% after:to-transparent after:to-10%"></div>
             <div className="animate-custom-marquee flex">
-              {/* Deretan Pertama */}
               <div className="flex items-center">
                 {flyerPortofolio.map((fly) => (
                   <img
@@ -220,8 +218,6 @@ export function Achievements() {
                   />
                 ))}
               </div>
-
-              {/* Deretan Kedua (Duplikasi) */}
               <div className="flex items-center">
                 {flyerPortofolio.map((fly) => (
                   <img

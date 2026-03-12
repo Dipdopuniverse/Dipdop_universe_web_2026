@@ -200,7 +200,7 @@ export function Programs() {
             <p className="text-[#0C2C55] text-xl md:text-2xl font-light max-w-2xl mx-auto">
               DIPDOP membuka peluang kolaborasi bagi perusahaan yang ingin
               berkontribusi melalui program Corporate Social Responsibility
-              (CSR) dalam bidang pendidikan, literasi digital, dan
+              (CSR) dalam bidang pendidikan, literasi digital, Kewirusahaan dan
               Melalui program ini, perusahaan dapat berperan aktif dalam
               mendukung pelaksanaan dua inisiatif utama DIPDOP:
             </p>

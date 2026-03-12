@@ -505,7 +505,7 @@ export function Portofolio() {
               backgroundImage: `radial-gradient(circle at top left, rgba(255,255,255,0.5) 0%, ${t.color || "#1CAF49"} 100%)`,
               backgroundColor: t.color || "#1CAF49",
             }}
-            className="w-full min-h-screen flex flex-col md:flex-row md:justify-center gap-9 md:items-center md:p-8 sticky top-0"
+            className="w-full min-h-screen h-auto flex flex-col md:flex-row md:justify-center gap-9 md:items-center md:p-8 sticky top-0"
           >
             <AnimatedContent
               distance={100}
