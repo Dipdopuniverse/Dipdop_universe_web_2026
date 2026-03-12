@@ -93,7 +93,7 @@ export function Programs() {
           </article>
           <a
             href={
-              "https://api.whatsapp.com/send?phone=62811305490&text=Hello,%20DIPDOP?%20Saya%20mau%20proposal%20Sekolah"
+              "https://api.whatsapp.com/send?phone=62811305490&text=Hello,%20DIPDOP?%20Saya%20mau%20proposal%20Kampus"
             }
             target="_blank"
             rel="noopener noreferrer"
@@ -162,7 +162,7 @@ export function Programs() {
           </article>
           <a
             href={
-              "https://api.whatsapp.com/send?phone=62811305490&text=Hello,%20DIPDOP?%20Saya%20mau%20proposal%20Kampus"
+              "https://api.whatsapp.com/send?phone=62811305490&text=Hello,%20DIPDOP?%20Saya%20mau%20proposal%20Sekolah"
             }
             target="_blank"
             rel="noopener noreferrer"
