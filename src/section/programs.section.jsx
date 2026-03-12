@@ -195,7 +195,7 @@ export function Programs() {
             </h2>
 
             <p className="text-[#0C2C55] text-xl md:text-2xl font-light max-w-2xl mx-auto">
-              Mendorong Akselerasi Generasi Muda dalam Ekosistem Ekonomi Digital
+              Mendorong Akselerasi Generasi Muda dalam Ekosistem Ekonomi Digital dan Berwirausaha
             </p>
             <p className="text-[#0C2C55] text-xl md:text-2xl font-light max-w-2xl mx-auto">
               DIPDOP membuka peluang kolaborasi bagi perusahaan yang ingin
