@@ -14,8 +14,8 @@ import { Collaborator } from "./section/collaborator.section";
 import { Testimoni } from "./section/testimoni.section";
 import { Contact } from "./section/contact.section";
 import { Helmet } from "react-helmet-async";
-import dipdop from "/dipdop.svg"
 import { Programs } from "./section/programs.section";
+import {LanguageSwitcher} from "./components/LanguageSwitcher";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -101,6 +101,7 @@ function App() {
             >
               <FaRegMessage color="white" />
             </button>
+            <LanguageSwitcher />
           </div>
           {/** Hero {Team} */}
           <Hero />
