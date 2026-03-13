@@ -194,7 +194,7 @@ export function Programs() {
               <span className="text-[#6BA2B0]">Social Initiative</span>
             </h2>
 
-            <p className="text-black text-xl md:text-2xl font-light max-w-4xl mb-6 font-bold">
+            <p className="text-black text-xl md:text-2xl max-w-4xl mb-6 font-bold">
               Mendorong Akselerasi Generasi Muda dalam Ekosistem Ekonomi Digital
             </p>
             <p className="text-[#0C2C55] text-xl md:text-2xl font-light max-w-2xl mb-4 mx-auto">
