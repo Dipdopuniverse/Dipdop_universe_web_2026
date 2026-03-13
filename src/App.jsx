@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>DIPDOP - Ecosystem Partner & Creative Agency</title>
+        <title>DIPDOP - Your Digital Ecosystem Partner</title>
         <meta
           name="description"
           content="DIPDOP membangun ekosistem melalui integrasi agency, media, dan komunitas untuk UMKM dan solusi bisnis strategis."
@@ -30,7 +30,7 @@ function App() {
           name="keywords"
           content="agency kreatif, partner ekosistem, solusi UMKM, DIPDOP"
         />
-        <meta property="og:title" content="DIPDOP - Ecosystem Partner" />
+        <meta property="og:title" content="DIPDOP - Your Digital Ecosystem Partner" />
         <meta
           property="og:description"
           content="More Than a Vendor. Your Ecosystem Partner."
