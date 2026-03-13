@@ -180,7 +180,7 @@ export function Programs() {
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
           <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#6BA2B0]/50 to-transparent"></div>
 
-          <div className="max-w-4xl flex items-center justify-center flex-col gap-2">
+          <div className="max-w-4xl flex items-center justify-center flex-col gap-1">
            
             <div className="inline-flex w-fit items-center gap-2 px-4 py-1.5 rounded-full bg-[#6BA2B0] border border-[#0C2C55] mb-8">
               <span className="w-2 h-2 rounded-full bg-[#0C2C55] animate-pulse"></span>
@@ -189,12 +189,12 @@ export function Programs() {
               </span>
             </div>
 
-            <h2 className="text-black poppins-bold text-4xl md:text-6xl font-bold uppercase tracking-tight mb-2">
+            <h2 className="text-black poppins-bold text-4xl md:text-6xl font-bold uppercase tracking-tight mb-1">
               Corporate{" "}
               <span className="text-[#6BA2B0]">Social Initiative</span>
             </h2>
 
-            <p className="text-black text-xl md:text-2xl font-light max-w-4xl mb-4 font-bold">
+            <p className="text-black text-xl md:text-2xl font-light max-w-4xl mb-6 font-bold">
               Mendorong Akselerasi Generasi Muda dalam Ekosistem Ekonomi Digital
             </p>
             <p className="text-[#0C2C55] text-xl md:text-2xl font-light max-w-2xl mb-4 mx-auto">
@@ -205,7 +205,7 @@ export function Programs() {
               mendukung pelaksanaan dua inisiatif utama DIPDOP:
             </p>
 
-            <div className="grid md:grid-cols-2 gap-8 text-left mb-12">
+            <div className="grid md:grid-cols-2 gap-8 text-left mb-16">
               <div className="p-6 rounded-2xl bg-[#0C2C55] border border-[#0C2C55] hover:shadow-2xl transition-colors">
                 <h3 className="text-white font-bold mb-3">Mahasiswa Digital</h3>
                 <p className="text-white/70 text-sm leading-relaxed">
@@ -222,7 +222,7 @@ export function Programs() {
               </div>
             </div>
 
-            <p className="text-black text-base md:text-lg  max-w-2xl mx-auto">
+            <p className="text-black mb-2 text-base md:text-lg  max-w-2xl mx-auto">
               Kolaborasi ini adalah jembatan bagi perusahaan Anda untuk
               meninggalkan dampak sosial yang nyata dan berkelanjutan bagi masa
               depan ekonomi digital bangsa. Kolaborasi ini tidak hanya
@@ -230,7 +230,7 @@ export function Programs() {
               dari kontribusi perusahaan dalam mempersiapkan generasi muda yang
               adaptif terhadap ekonomi digital.
             </p>
-            <p className="text-black text-base md:text-lg  max-w-2xl mx-auto">
+            <p className="text-black mb-2 text-base md:text-lg  max-w-2xl mx-auto">
               Perusahaan yang tertarik untuk mendukung atau berkolaborasi dalam
               program ini dapat menghubungi tim DIPDOP untuk informasi lebih
               lanjut mengenai skema kerja sama dan implementasi program.
