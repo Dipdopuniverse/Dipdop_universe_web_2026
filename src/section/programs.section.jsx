@@ -176,12 +176,12 @@ export function Programs() {
         <div className="absolute inset-0 bg-gradient-to-r rounded-[32px] blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-700"></div>
 
         <div className="relative bg-transparent p-8 md:p-20 rounded-[32px] border border-white/10 flex flex-col items-center text-center overflow-hidden">
-          {/* Decorative Elements */}
+         
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
           <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#6BA2B0]/50 to-transparent"></div>
 
-          <div className="max-w-4xl flex items-center justify-center flex-col gap-4">
-            {/* Badge */}
+          <div className="max-w-4xl flex items-center justify-center flex-col gap-2">
+           
             <div className="inline-flex w-fit items-center gap-2 px-4 py-1.5 rounded-full bg-[#6BA2B0] border border-[#0C2C55] mb-8">
               <span className="w-2 h-2 rounded-full bg-[#0C2C55] animate-pulse"></span>
               <span className="text-white text-xs tracking-[0.2em] uppercase font-bold">
@@ -194,14 +194,14 @@ export function Programs() {
               <span className="text-[#6BA2B0]">Social Initiative</span>
             </h2>
 
-            <p className="text-[#0C2C55] text-xl md:text-2xl font-light max-w-2xl mx-auto">
-              Mendorong Akselerasi Generasi Muda dalam Ekosistem Ekonomi Digital dan Berwirausaha
+            <p className="text-black text-xl md:text-2xl font-light max-w-2xl mx-auto">
+              Mendorong Akselerasi Generasi Muda dalam Ekosistem Ekonomi Digital
             </p>
-            <p className="text-[#0C2C55] text-xl md:text-2xl font-light max-w-2xl mx-auto">
+            <p className="text-black text-xl md:text-2xl font-light max-w-2xl mx-auto">
               DIPDOP membuka peluang kolaborasi bagi perusahaan yang ingin
               berkontribusi melalui program Corporate Social Responsibility
-              (CSR) dalam bidang pendidikan, literasi digital, Kewirusahaan dan
-              Melalui program ini, perusahaan dapat berperan aktif dalam
+              (CSR) dalam bidang pendidikan, literasi digital, kewirusahaan dan
+              melalui program ini, perusahaan dapat berperan aktif dalam
               mendukung pelaksanaan dua inisiatif utama DIPDOP:
             </p>
 
