@@ -194,10 +194,10 @@ export function Programs() {
               <span className="text-[#6BA2B0]">Social Initiative</span>
             </h2>
 
-            <p className="text-black text-xl md:text-2xl font-light max-w-2xl mx-auto">
-              Mendorong Akselerasi Generasi Muda dalam Ekosistem Ekonomi Digital
+            <p className="text-black text-xl md:text-2xl font-light max-w-2xl mx-2 font-bold">
+              Mendorong Akselerasi Generasi Muda dalam Ekosistem Ekonomi Digital mb-4
             </p>
-            <p className="text-black text-xl md:text-2xl font-light max-w-2xl mx-auto">
+            <p className="text-[#0C2C55] text-xl md:text-2xl font-light max-w-2xl mb-4 mx-auto">
               DIPDOP membuka peluang kolaborasi bagi perusahaan yang ingin
               berkontribusi melalui program Corporate Social Responsibility
               (CSR) dalam bidang pendidikan, literasi digital, kewirusahaan dan
