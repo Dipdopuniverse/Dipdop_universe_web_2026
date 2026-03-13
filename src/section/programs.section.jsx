@@ -180,7 +180,7 @@ export function Programs() {
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
           <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#6BA2B0]/50 to-transparent"></div>
 
-          <div className="max-w-4xl flex items-center justify-center flex-col gap-1">
+          <div className="max-w-6xl flex items-center justify-center flex-col gap-1">
            
             <div className="inline-flex w-fit items-center gap-2 px-4 py-1.5 rounded-full bg-[#6BA2B0] border border-[#0C2C55] mb-8">
               <span className="w-2 h-2 rounded-full bg-[#0C2C55] animate-pulse"></span>
@@ -205,7 +205,7 @@ export function Programs() {
               mendukung pelaksanaan dua inisiatif utama DIPDOP:
             </p>
 
-            <div className="grid md:grid-cols-2 gap-8 text-left mb-16">
+            <div className="grid md:grid-cols-2 max-w-4xl gap-8 text-left mb-16">
               <div className="p-6 rounded-2xl bg-[#0C2C55] border border-[#0C2C55] hover:shadow-2xl transition-colors">
                 <h3 className="text-white font-bold mb-3">Mahasiswa Digital</h3>
                 <p className="text-white/70 text-sm leading-relaxed">
