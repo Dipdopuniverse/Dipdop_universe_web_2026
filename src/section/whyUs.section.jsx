@@ -139,7 +139,7 @@ export function WhyUs() {
             {collaborationData.plus.map((item, index) => (
               <SpotlightCard
                 key={index}
-                className="w-full rounded-2xl border gap-4 shadow-2xl  hover:shadow-white group hover:border-white border-gray-600 flex flex-col p-4 items-center"
+                className="w-full rounded-2xl border transition-all gap-4 shadow-2xl  hover:shadow-white group hover:border-white border-gray-600 flex flex-col p-4 items-center"
                 spotlightColor="rgba(255, 255, 255, 0.3)"
               >
                 <div className="w-full items-center flex gap-4">
