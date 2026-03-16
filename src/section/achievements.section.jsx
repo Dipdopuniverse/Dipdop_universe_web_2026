@@ -131,6 +131,17 @@ export function Achievements() {
       year: "2024",
       img: "/webinar 5.png",
     },
+    {
+      id: 37,
+      title: "Konten Yang Menjual - Webinar 5",
+      color: "#1e40af",
+      category: "Design Portfolio",
+      about:
+        "Flyer webinar tentang pembuatan konten viral dan menjual. Menggunakan elemen grafis yang mencerminkan tren media sosial terkini.",
+      link: null,
+      year: "2024",
+      img: "/haikal.jpeg",
+    },
   ];
   return (
     <>
