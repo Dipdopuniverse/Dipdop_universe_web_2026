@@ -587,7 +587,7 @@ export function Portofolio() {
             .map((f) => {
               return (
                 <div
-                  className="relative w-full gap-4 flex flex-col overflow-hidden p-8 rounded-3xl shadow-2xl"
+                  className="relative w-full gap-2 md:gap-4 flex flex-col overflow-hidden p-6 md:p-8 rounded-3xl shadow-2xl"
                   style={{ backgroundColor: f.color1 }}
                   key={f.category}
                 >
@@ -645,7 +645,7 @@ export function Portofolio() {
                     threshold={0.1}
                     delay={0.5}
                   >
-                    <h1 className="font-extrabold text-8xl relative z-10 text-white text-shadow-teal-400 uppercase">
+                    <h1 className="font-extrabold text-xl md:text-8xl relative z-10 text-white text-shadow-teal-400 uppercase">
                       {f.title}
                     </h1>
                   </AnimatedContent>
@@ -663,7 +663,7 @@ export function Portofolio() {
                     delay={1}
                   >
                     <div
-                      className="z-50 relative text-xl w-[40%] p-4 text-white"
+                      className="z-50 relative text-sm md:text-xl w-full md:w-[40%] p-2 md:p-4 text-white"
                       dangerouslySetInnerHTML={{ __html: f.full_text }}
                     />
                   </AnimatedContent>
@@ -680,7 +680,7 @@ export function Portofolio() {
                     threshold={0.1}
                     delay={1.2}
                   >
-                    <div className="relative z-10 p-4 bg-transparent border-white rounded-[30px] hover:bg-white hover:text-gray-800 transition-all duration-300 font-semibold cursor-pointer  border-2 w-fit text-xl italic text-white">
+                    <div className="relative z-10 p-4 bg-transparent border-white rounded-[30px] hover:bg-white hover:text-gray-800 transition-all duration-300 font-semibold cursor-pointer  border-2 w-fit text-base md:text-xl italic text-white">
                       {f.pricing}
                     </div>
                   </AnimatedContent>
