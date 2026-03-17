@@ -24,6 +24,7 @@ import eventElora from "/eventElora.jpg";
 import mencintaisederhana from "/mencintaisederhana.jpg";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { motion } from "motion/react";
 
 export function Portofolio() {
   const [activeCategory, setActiveCategory] = useState("Writing");
@@ -342,22 +343,22 @@ export function Portofolio() {
     },
     {
       id: 18,
-      title: "Untuk Mencintai Sederhana",
+      title: "Untuk Mencintai, Sederhana Saja — Turasih",
       color: "#BCC6CC",
       category: "Book Publishing",
       about:
-        "Konsep desain yang bersih dan minimalis untuk menonjolkan keindahan dalam kesederhanaan. Menggunakan warna-warna tenang dan layout yang damai sesuai dengan tema buku yang penuh makna.",
+        "Buku Untuk Mencintai, Sederhana Saja karya Turasih merupakan salah satu karya yang dikembangkan melalui layanan Book Publishing DIPDOP. Dalam proyek ini, DIPDOP mendampingi proses pengembangan buku mulai dari perancangan cover design yang merepresentasikan nuansa karya, pengurusan ISBN resmi, hingga formatting layout naskah agar siap diterbitkan secara profesional. Melalui proses tersebut, naskah yang awalnya berupa tulisan mentah berhasil ditransformasikan menjadi buku yang siap dipublikasikan dan dibaca oleh publik. Proyek ini menunjukkan komitmen DIPDOP dalam membantu penulis menghadirkan karya mereka dalam bentuk yang lebih rapi, layak terbit, dan memiliki identitas penerbitan yang jelas.",
       link: null,
       year: "2024",
       img: mencintaisederhana,
     },
     {
       id: 17,
-      title: "Anak Debu",
+      title: "Anak Debu — Risa Noviati Amalia",
       color: "#4A4A4A",
       category: "Book Publishing",
       about:
-      "Desain cover yang menonjolkan nuansa puitis dan reflektif. Menggunakan ilustrasi sentral yang evocative, tipografi elegan, dan palet warna sederhana untuk mencerminkan kedalaman narasi buku.",
+        "Anak Debu karya Risa Noviati Amalia juga menjadi bagian dari portofolio layanan Book Publishing DIPDOP. Dalam pengembangan buku ini, DIPDOP memberikan dukungan pada aspek desain cover, pengurusan ISBN, serta formatting layout naskah agar buku dapat tampil dengan standar penerbitan yang profesional. Pendampingan ini memungkinkan penulis untuk fokus pada kekuatan cerita dan pesan yang ingin disampaikan, sementara proses teknis penerbitan ditangani secara sistematis. Melalui kolaborasi ini, DIPDOP membantu mewujudkan karya sastra menjadi buku yang siap diperkenalkan kepada pembaca yang lebih luas.",
       link: null,
       year: "2024",
       img: anakdebu,
@@ -368,7 +369,7 @@ export function Portofolio() {
       color: "#FF007F",
       category: "Book Publishing",
       about:
-        "Desain cover majalah dengan konsep modern dan dinamis. Menggunakan visual yang berani, tipografi kreatif, dan palet warna vibrant untuk mencerminkan energi serta vibrasi kuat agar menonjol di rak buku.",
+        "Selain buku, DIPDOP juga pernah mengembangkan Qeez Magazine!, sebuah majalah digital yang lahir dari semangat kolaborasi antara tim editorial dan komunitas pembaca. Yang membuat Qeez Magazine! unik adalah pendekatannya yang melibatkan pembaca sebagai kontributor aktif. Para pembaca tidak hanya menikmati konten, tetapi juga berkesempatan mengirimkan karya artikel mereka untuk diterbitkan dalam majalah. Konsep ini menciptakan ruang kreatif yang kolaboratif, di mana komunitas ikut membangun isi majalah bersama tim editorial. Melalui pendekatan ini, Qeez Magazine! berhasil membangun hubungan yang lebih dekat dengan pembacanya serta menumbuhkan komunitas kreatif yang terus berkembang.",
       link: null,
       year: "2024",
       img: qeez,
@@ -436,38 +437,120 @@ export function Portofolio() {
   const categories = [
     {
       category: "Writing",
+      title: "Writing",
+      color1: "#9DC08B",
+      color2: "#609966",
+      color3: "#40513B",
+      description:
+        "DIPDOP membantu brand, organisasi, dan individu menyampaikan pesan melalui content writing maupun copywriting untuk artikel website, blog, caption media sosial, hingga materi promosi.",
+      full_text:
+        "Kata-kata yang tepat dapat membangun kepercayaan, menjelaskan nilai sebuah brand, dan mendorong audiens untuk mengambil tindakan. Melalui layanan <b>Writing</b>, DIPDOP membantu brand, organisasi, dan individu menyampaikan pesan mereka dengan cara yang jelas, menarik, dan berdampak.<br><br>Kami menyediakan layanan <b>content writing maupun copywriting</b> untuk berbagai kebutuhan, mulai dari artikel website, konten blog, caption media sosial, hingga materi promosi yang dirancang untuk meningkatkan engagement dan konversi. Setiap tulisan disusun dengan pendekatan strategis agar tidak hanya enak dibaca, tetapi juga relevan dengan target audiens.<br><br>Dengan dukungan tim yang memahami storytelling dan komunikasi digital, <b>DIPDOP membantu brand Anda berbicara dengan cara yang lebih kuat dan meyakinkan.</b>",
+      pricing: "Harga mulai dari IDR 350K.",
       seemore: "https://dipdop.net/",
     },
     {
       category: "Landing Page/Website",
+      title: "Landing Page / Website",
+      color1: "#CCA8E9",
+      color2: "#C3BEF0",
+      color3: "#CADEFC",
+      description:
+        "Membangun kehadiran digital yang kredibel, informatif, dan mudah diakses melalui representasi profesional dari sebuah brand atau organisasi.",
+      full_text:
+        "Di era digital, website bukan sekadar halaman online—melainkan <b>representasi profesional dari sebuah brand atau organisasi.</b> Melalui layanan <b>Landing Page & Website Development</b>, DIPDOP membantu Anda membangun kehadiran digital yang kredibel, informatif, dan mudah diakses oleh audiens.<br><br>Kami merancang landing page maupun website dengan pendekatan yang menggabungkan <b>struktur yang jelas, desain yang menarik, serta pesan yang efektif</b> sehingga pengunjung dapat memahami value yang Anda tawarkan dengan cepat.<br><br>Baik untuk kebutuhan personal branding, bisnis, komunitas, maupun kampanye program, <b>DIPDOP siap membantu membangun website yang fungsional sekaligus meyakinkan.</b>",
+      pricing:
+        "Harga layanan mulai dari 2 juta-an saja, raih 1 juta dalam masa promo.",
       seemore: "https://dipdop.net/website-portfolio/",
     },
     {
       category: "Social Media Management",
+      title: "Social Media Management",
+      color1: "#E84545",
+      color2: "#903749",
+      color3: "#53354A",
+      description:
+        "Mengelola akun media sosial secara terarah mulai dari perencanaan konten, penulisan caption, hingga desain visual.",
+      full_text:
+        "Media sosial telah menjadi salah satu kanal komunikasi paling penting bagi brand dan organisasi. Namun, mengelolanya secara konsisten dan strategis membutuhkan waktu, kreativitas, dan pemahaman terhadap audiens.<br><br>Melalui layanan <b>Social Media Management</b>, DIPDOP membantu mengelola akun media sosial Anda secara lebih terarah—mulai dari perencanaan konten, penulisan caption, desain visual, hingga pengelolaan publikasi konten secara berkala.<br><br>Dengan pendekatan yang terstruktur, kami membantu brand Anda <b>tetap aktif, relevan, dan mampu membangun interaksi yang lebih kuat dengan audiens.</b>",
+      pricing: "Start from IDR 1 Mio",
       seemore: "https://dipdop.net/socmed-activation-portfolio/",
     },
     {
       category: "Design",
+      title: "Design",
+      color1: "#FAB12F",
+      color2: "#FA812F",
+      color3: "#DD0303",
+      description:
+        "Menciptakan berbagai materi visual seperti banner, logo, buku, majalah, flyer, hingga merchandise t-shirt.",
+      full_text:
+        "Visual yang kuat dapat membuat pesan lebih mudah dipahami dan meninggalkan kesan yang lebih lama bagi audiens. Melalui layanan <b>Design</b>, DIPDOP membantu menciptakan berbagai materi visual yang mendukung kebutuhan komunikasi dan branding Anda.<br><br>Kami mengerjakan beragam kebutuhan desain, mulai dari <b>banner, logo, buku, majalah, flyer, merchandise seperti t-shirt, hingga berbagai materi promosi lainnya.</b> Setiap desain dikembangkan dengan mempertimbangkan identitas brand, tujuan komunikasi, serta estetika visual yang menarik.<br><br>Dengan pendekatan kreatif dan fleksibel, <b>DIPDOP siap membantu mewujudkan ide Anda menjadi visual yang kuat dan profesional.</b>",
+      pricing: "Layanan mulai dari ratusan ribu rupiah.",
       seemore: "https://dipdop.net/design-portfolio/",
     },
     {
       category: "Workshop",
+      title: "Workshop",
+      color1: "#0F828C",
+      color2: "#065084",
+      color3: "#320A6B",
+      description:
+        "Sesi pelatihan inspiratif dan aplikatif untuk pengembangan kapasitas, kreativitas, dan pemanfaatan teknologi digital.",
+      full_text:
+        "Berbagi pengetahuan dan pengalaman merupakan bagian penting dalam mendorong pertumbuhan individu maupun organisasi. Melalui layanan <b>Workshop</b>, DIPDOP sering bekerja sama dengan berbagai instansi, komunitas, maupun institusi pendidikan untuk menghadirkan sesi pelatihan yang inspiratif dan aplikatif.<br><br>Materi workshop dapat mencakup berbagai topik yang relevan dengan pengembangan kapasitas, kreativitas, dan pemanfaatan teknologi digital. Setiap sesi dirancang agar tidak hanya bersifat teoritis, tetapi juga memberikan <b>wawasan praktis yang dapat langsung diterapkan oleh peserta.</b><br><br>Dengan pengalaman berkolaborasi bersama berbagai pihak, <b>DIPDOP menghadirkan workshop yang informatif, interaktif, dan berdampak.</b>",
+      pricing: "Program workshop mulai dari sekitar IDR 5 juta.",
       seemore: "https://dipdop.net/workshop-portfolio/",
     },
     {
       category: "Video",
+      title: "Video",
+      color1: "#FFE100",
+      color2: "#FFC900",
+      color3: "#EBE389",
+      description:
+        "Menghadirkan konten visual menarik untuk YouTube, video promosi, reels media sosial, hingga iklan digital.",
+      full_text:
+        "Konten video kini menjadi salah satu format komunikasi paling efektif untuk menjangkau audiens secara luas. Melalui layanan <b>Video Production</b>, DIPDOP membantu Anda menghadirkan konten visual yang menarik, informatif, dan relevan dengan kebutuhan komunikasi digital.<br><br>Kami memproduksi berbagai jenis video, mulai dari <b>konten YouTube, video promosi, reels media sosial, hingga materi iklan digital</b> yang dirancang untuk meningkatkan daya tarik pesan Anda.<br><br>Dengan perpaduan kreativitas dan storytelling visual, <b>DIPDOP membantu mengubah ide menjadi konten video yang lebih hidup dan mudah diingat oleh audiens.</b>",
+      pricing: "Layanan mulai dari sekitar IDR 1 juta.",
       seemore: "https://dipdop.net/video-portfolio/",
     },
     {
       category: "Book Publishing",
+      title: "Book Publishing",
+      color1: "#483AA0",
+      color2: "#7965C1",
+      color3: "#E3D095",
+      description:
+        "Pendampingan menyeluruh proses penerbitan mulai dari editorial, desain cover, layout, ISBN, hingga pemasaran.",
+      full_text:
+        "Menerbitkan buku bukan sekadar mencetak naskah menjadi halaman. Sebuah buku membutuhkan proses kreatif, penyuntingan yang kuat, desain yang menarik, hingga strategi distribusi agar karya tersebut benar-benar sampai ke pembacanya. <br></br>Melalui layanan Book Publishing, DIPDOP menghadirkan pendampingan menyeluruh bagi para penulis yang ingin mengembangkan karya mereka secara profesional. Kami membantu setiap tahap dalam proses penerbitan, mulai dari editorial dan penyuntingan naskah, pengembangan desain cover, formatting layout buku, pengurusan ISBN, hingga dukungan pemasaran dan publikasi karya. <br></br>Pendekatan kami bersifat kolaboratif. Penulis tetap menjadi pemilik visi utama dari karyanya, sementara tim DIPDOP memastikan setiap aspek teknis dan kreatif dipersiapkan dengan baik agar buku dapat hadir dengan standar penerbitan yang layak dan memiliki daya tarik bagi pembaca. <br><br>Baik Anda seorang penulis yang baru memulai perjalanan literasi maupun kreator yang ingin membawa karya ke level berikutnya, DIPDOP siap menjadi partner dalam mewujudkan buku Anda menjadi karya yang siap dibaca, dibagikan, dan dikenang.",
+      pricing: "Hubungi kami untuk penawaran.",
       seemore: "https://dipdop.net/book-published-portfolio/",
     },
     {
       category: "Translation",
+      title: "Translation",
+      color1: "#78C841",
+      color2: "#B4E50D",
+      color3: "#FF9B2F",
+      description:
+        "Layanan penerjemahan konten antara Bahasa Indonesia dan Bahasa Inggris dengan pendekatan profesional.",
+      full_text:
+        "Komunikasi lintas bahasa sering kali menjadi kunci untuk menjangkau audiens yang lebih luas. Melalui layanan <b>Translation</b>, DIPDOP membantu menerjemahkan berbagai jenis konten antara <b>Bahasa Indonesia dan Bahasa Inggris</b> dengan pendekatan yang profesional dan kontekstual.<br><br>Kami tidak hanya menerjemahkan kata demi kata, tetapi juga memastikan <b>makna, tone, dan pesan dari naskah tetap tersampaikan dengan baik</b> dalam bahasa tujuan.<br><br>Layanan ini cocok untuk berbagai kebutuhan, mulai dari artikel, dokumen, materi promosi, hingga konten digital lainnya.",
+      pricing: "Layanan translation mulai dari ratusan ribu rupiah.",
       seemore: "https://dipdop.net/translation-portfolio/",
     },
     {
       category: "Event",
+      title: "Event",
+      color1: "#FAEAB1",
+      color2: "#34656D",
+      color3: "#334443",
+      description:
+        "Event Management untuk seminar, meet and greet, diskusi komunitas, hingga program kolaborasi lintas sektor.",
+      full_text:
+        "Sebuah acara yang dirancang dengan baik dapat menjadi sarana yang efektif untuk membangun relasi, menyampaikan pesan, dan memperkuat komunitas. Melalui layanan <b>Event Management</b>, DIPDOP membantu merancang dan menyelenggarakan berbagai kegiatan yang berfokus pada interaksi dan pengalaman peserta.<br><br>Kami berpengalaman dalam mengelola berbagai jenis acara seperti <b>seminar, meet and greet, diskusi komunitas, hingga program kolaborasi lintas sektor.</b> Setiap event dirancang dengan konsep yang jelas agar tujuan kegiatan dapat tercapai secara optimal.<br><br>Dengan perencanaan yang terstruktur dan pendekatan kolaboratif, <b>DIPDOP membantu menghadirkan event yang berjalan lancar, profesional, and berkesan.</b>",
+      pricing: "Layanan event mulai dari sekitar IDR 10 juta.",
       seemore: "https://dipdop.net/event-portfolio/",
     },
   ];
@@ -497,6 +580,113 @@ export function Portofolio() {
               {cat.category}
             </button>
           ))}
+        </div>
+        <div className="w-full h-auto p-6 flex">
+          {categories
+            .filter((f) => f.category === activeCategory)
+            .map((f) => {
+              return (
+                <div
+                  className="relative w-full gap-4 flex flex-col overflow-hidden p-8 rounded-3xl shadow-2xl"
+                  style={{ backgroundColor: f.color1 }}
+                  key={f.category}
+                >
+                  <svg
+                    id="visual"
+                    viewBox="0 0 900 600"
+                    preserveAspectRatio="none"
+                    className="absolute w-full h-full right-0 inset-0 z-0 "
+                  >
+                    <motion.path
+                      key={`${f.category}-path1`}
+                      initial={{ x: 100, opacity: 0 }}
+                      whileInView={{ x: 0, opacity: 1 }}
+                      viewport={{
+                        once: false,
+                        amount: 0.1,
+                      }}
+                      transition={{
+                        duration: 1.8,
+                        delay: 0.2,
+                        ease: "easeOut",
+                      }}
+                      d="M695 600L391 600L391 533L610 533L610 467L609 467L609 400L361 400L361 333L514 333L514 267L428 267L428 200L399 200L399 133L545 133L545 67L587 67L587 0L900 0L900 67L900 67L900 133L900 133L900 200L900 200L900 267L900 267L900 333L900 333L900 400L900 400L900 467L900 467L900 533L900 533L900 600L900 600Z"
+                      fill={f.color2}
+                      fillOpacity="transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);"
+                    />
+                    <motion.path
+                      key={`${f.category}-path2`}
+                      initial={{ x: 100, opacity: 0 }}
+                      whileInView={{ x: 0, opacity: 1 }}
+                      viewport={{
+                        once: true,
+                        amount: 0.1,
+                      }}
+                      transition={{
+                        duration: 1.8,
+                        delay: 1,
+                        ease: "easeOut",
+                      }}
+                      d="M794 600L737 600L737 533L768 533L768 467L803 467L803 400L781 400L781 333L676 333L676 267L578 267L578 200L750 200L750 133L722 133L722 67L803 67L803 0L900 0L900 67L900 67L900 133L900 133L900 200L900 200L900 267L900 267L900 333L900 333L900 400L900 400L900 467L900 467L900 533L900 533L900 600L900 600Z"
+                      fill={f.color3}
+                      fillOpacity="transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);"
+                    />
+                  </svg>
+                  <AnimatedContent
+                    distance={100}
+                    direction="horizontal"
+                    duration={1.8}
+                    reverse
+                    ease="power3.out"
+                    initialOpacity={0}
+                    className="w-full"
+                    animateOpacity
+                    scale={1}
+                    threshold={0.1}
+                    delay={0.5}
+                  >
+                    <h1 className="font-extrabold text-8xl relative z-10 text-white text-shadow-teal-400 uppercase">
+                      {f.title}
+                    </h1>
+                  </AnimatedContent>
+                  <AnimatedContent
+                    distance={100}
+                    direction="horizontal"
+                    duration={1.8}
+                    reverse
+                    ease="power3.out"
+                    initialOpacity={0}
+                    className="w-full"
+                    animateOpacity
+                    scale={1}
+                    threshold={0.1}
+                    delay={1}
+                  >
+                    <div
+                      className="z-50 relative text-xl w-[40%] p-4 text-white"
+                      dangerouslySetInnerHTML={{ __html: f.full_text }}
+                    />
+                  </AnimatedContent>
+                  <AnimatedContent
+                    distance={100}
+                    direction="horizontal"
+                    duration={1.8}
+                    reverse
+                    ease="power3.out"
+                    initialOpacity={0}
+                    className="w-full"
+                    animateOpacity
+                    scale={1}
+                    threshold={0.1}
+                    delay={1.2}
+                  >
+                    <div className="relative z-10 p-4 bg-transparent border-white rounded-[30px] hover:bg-white hover:text-gray-800 transition-all duration-300 font-semibold cursor-pointer  border-2 w-fit text-xl italic text-white">
+                      {f.pricing}
+                    </div>
+                  </AnimatedContent>
+                </div>
+              );
+            })}
         </div>
         {filteredPortofolio.map((t) => (
           <div
