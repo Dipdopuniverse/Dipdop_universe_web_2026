@@ -543,9 +543,9 @@ export function Portofolio() {
     {
       category: "Event",
       title: "Event",
-      color1: "#FAEAB1",
-      color2: "#34656D",
-      color3: "#334443",
+      color1: "#8F0177",
+      color2: "#DE1A58",
+      color3: "#F67D31",
       description:
         "Event Management untuk seminar, meet and greet, diskusi komunitas, hingga program kolaborasi lintas sektor.",
       full_text:
