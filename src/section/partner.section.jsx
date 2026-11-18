@@ -15,9 +15,11 @@ import tembapbelajar from "/Tempat_Belajar.png";
 import original from "/original.webp";
 import harisenin from "/harisenin1.png";
 import Eduwork from "/eduwork1.png";
+import RumahBumnJakarta from "/RumahBumnJakarta.png"
 
 export function Partner() {
       const partnerLogos = [
+        { src: RumahBumnJakarta , title: "Rumah BUMN Jakarta", href: "" },
         { src: dealls, title: "Dealls", href: "" },
         { src: kerja, title: "IKERJA", href: "" },
         { src: glint, title: "Glints", href: "" },

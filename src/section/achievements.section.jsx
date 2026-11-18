@@ -142,6 +142,17 @@ export function Achievements() {
       year: "2024",
       img: "/haikal.jpeg",
     },
+    {
+      id: 38,
+      title: "Lavel up di era digital - Webinar 5",
+      color: "#1e40af",
+      category: "Design Portfolio",
+      about:
+        "Flyer webinar tentang pembuatan konten viral dan menjual. Menggunakan elemen grafis yang mencerminkan tren media sosial terkini.",
+      link: null,
+      year: "2024",
+      img: "/add1.jpeg",
+    },
   ];
   return (
     <>
